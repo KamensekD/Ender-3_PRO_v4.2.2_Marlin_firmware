@@ -24,8 +24,33 @@ module.exports = {
 // //        stable_branch: "release-2.1.2",
 // //        nightly_branch: "bugfix-2.1.x"
 
+    },
+        configuration: {
+        enable: [
+            //standard leveling menu helper
+            "LCD_BED_TRAMMING",
+            "BED_TRAMMING_INCLUDE_CENTER",
+            //PLA Preheat Constants
+            ["PREHEAT_1_TEMP_HOTEND", 185],
+            ["PREHEAT_1_TEMP_BED", 45],
+            //Jyers UI by Jacob Myers
+            "DWIN_CREALITY_LCD_JYERSUI"
+        ],
+        disable: [
+            "LCD_BED_LEVELING",
+            "DWIN_CREALITY_LCD",
+            "DWIN_LCD_PROUI",
+            "DWIN_MARLINUI_PORTRAIT",
+            "DWIN_MARLINUI_LANDSCAPE"
+        ]
+    },
+    configuration_adv: {
+        enable: [
+            //octoprint
+            "HOST_ACTION_COMMANDS"
+        ]
     }
 };
 
-// trying barebones default build but unfortunately it fails at "creating release"
+// trying barebones default build but unfortunately after succesfull build it always fails at "creating release"
 // with: "Request failed with status code 403" and "Error: Process completed with exit code 1."
