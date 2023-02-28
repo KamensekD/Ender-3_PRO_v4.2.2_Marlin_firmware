@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - 'builds/**'
-  schedule:
-    - cron:  '30 3 * * *'
+#  schedule:
+#     - cron:  '30 3 * * *'
 
 jobs:
   create_builds:
