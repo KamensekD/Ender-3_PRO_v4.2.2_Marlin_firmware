@@ -1,3 +1,5 @@
+# NOT WORKING YET - Trying to make zisismaras's marlin_auto_build work for Ender-3 Pro with 4.2.2 board
+
 # Ender-3 4.2.2 firmware
 
 Automatic [Marlin](https://github.com/MarlinFirmware/Marlin) builds for the Ender-3 with the stock creality 4.2.2(512K) board.  
