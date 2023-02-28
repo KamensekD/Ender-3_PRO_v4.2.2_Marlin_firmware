@@ -18,4 +18,4 @@ module.exports = {
 };
 
 // trying barebones default build but unfortunately it fails at
-// creating release with: "Request failed with status code 403" and "Error: Process completed with exit code 1."
+// "creating release" with: "Request failed with status code 403" and "Error: Process completed with exit code 1."
