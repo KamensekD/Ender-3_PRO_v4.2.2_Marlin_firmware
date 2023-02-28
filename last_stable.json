@@ -1,7 +1,12 @@
 {
+    "builds/base.js": {
+        "version": "2.1.2",
+        "md5": "565dbbada6e311cde85bf67439b29ebe",
+        "assetId": 97515033
+    },
     "builds/kamac.js": {
         "version": "2.1.2",
-        "md5": "9d2ddd3485bb7989ffaed6cd92bd6e81",
+        "md5": "aa31fba861ad6500f4c4237c80d63b8c",
         "assetId": 97512747
     }
 }
