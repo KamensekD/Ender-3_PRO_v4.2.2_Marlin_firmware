@@ -3,7 +3,7 @@ module.exports = {
     active: true,
     only: "stable",
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{uid}}",
+        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
 // //        stable_name: "ender_3_v4.2.2-{{marlin_version}}-base-{{uid}}",
 // //        nightly_name: "ender_3_v4.2.2-{{current_date}}-base-{{uid}}"
