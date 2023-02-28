@@ -3,10 +3,10 @@ module.exports = {
     active: true,
     only: "stable",
     meta: {
-//        stable_name: "ender3_v4.2.2-2.1.2-kamac-{{uid}}",
-//        nightly_name: "ender3_v4.2.2-{{current_date}}-kamac-{{uid}}"
-        stable_name: "ender3pro_v4.2.2-2.1.2-kamac-{{uid}}",
-        nightly_name: "ender3pro_v4.2.2-{{current_date}}-kamac-{{uid}}"
+        stable_name: "ender3_v4.2.2-2.1.2-kamac-{{uid}}",
+        nightly_name: "ender3_v4.2.2-{{current_date}}-kamac-{{uid}}"
+//        stable_name: "ender3pro_v4.2.2-2.1.2-kamac-{{uid}}",
+//        nightly_name: "ender3pro_v4.2.2-{{current_date}}-kamac-{{uid}}"
     },
     based_on: {
         repo: "https://github.com/zisismaras/ender_3_4.2.2_firmware",
@@ -17,7 +17,7 @@ module.exports = {
 //        stable_branch: "release-2.1.2",
 //        nightly_branch: "bugfix-2.1.x"
         stable_branch: "stable-2.1.2",
-        nightly_branch: "bugfix-2.1.x"
+//        nightly_branch: "bugfix-2.1.x"
     }
 };
 
