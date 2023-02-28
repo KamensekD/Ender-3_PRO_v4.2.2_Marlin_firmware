@@ -8,7 +8,7 @@ module.exports = {
     },
     based_on: {
         repo: "https://github.com/MarlinFirmware/Configurations/",
-        path: "/config/examples/Creality/Ender-3 Pro/CrealityV427/",
+        path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
         stable_branch: "release-2.1.2}",
         nightly_branch: "bugfix-2.1.x"
     }
