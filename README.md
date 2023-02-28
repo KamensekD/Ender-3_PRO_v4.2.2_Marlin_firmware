@@ -1,8 +1,10 @@
-# NOT WORKING YET - Trying to make zisismaras's marlin_auto_build work for Ender-3 Pro with 4.2.2 board
-## trying barebones default build but unfortunately after succesfull build it always fails at "creating release"
-## with: "Request failed with status code 403" and "Error: Process completed with exit code 1."; I have no idea, what the problem is :/
+# NOT TESTED! - using zisismaras's marlin_auto_build to build Marlin firmware for Ender-3 Pro with 4.2.2 board
 # Update: found the problem of failing at "creating release"
 ## in order for marlin_auto_build to work as intended, you have to select Settings tab in your forked repository and select Actions / General. Then in Workflow permissions you have to select Read and Write permisions (by default only read permissions are allowed)
+## Had a lot of trouble trying to build, but after succesfull build process always failed at "creating release" with:
+## "Request failed with status code 403" and "Error: Process completed with exit code 1."
+
+_____
 # Ender-3 4.2.2 firmware
 
 Automatic [Marlin](https://github.com/MarlinFirmware/Marlin) builds for the Ender-3 with the stock creality 4.2.2(512K) board.  
