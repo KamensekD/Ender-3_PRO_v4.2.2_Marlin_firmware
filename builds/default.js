@@ -11,3 +11,6 @@ module.exports = {
         nightly_branch: "bugfix-2.1.x"
     }
 };
+
+// trying barebones default build but unfortunately it fails at
+// creating release with: "Request failed with status code 403" and "Error: Process completed with exit code 1."
