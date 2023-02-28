@@ -1,5 +1,6 @@
 # NOT WORKING YET - Trying to make zisismaras's marlin_auto_build work for Ender-3 Pro with 4.2.2 board
-## trying barebones default build but unfortunately it fails at "creating release" with: "Request failed with status code 403" and "Error: Process completed with exit code 1."; I have no idea, what the problem is :/
+## trying barebones default build but unfortunately after succesfull build it always fails at "creating release"
+## with: "Request failed with status code 403" and "Error: Process completed with exit code 1."; I have no idea, what the problem is :/
 
 # Ender-3 4.2.2 firmware
 
