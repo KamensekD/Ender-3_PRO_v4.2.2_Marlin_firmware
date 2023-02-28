@@ -27,21 +27,13 @@ module.exports = {
     },
         configuration: {
         enable: [
+            //PLA Preheat Constants
+            ["PREHEAT_1_TEMP_HOTEND", 180],
+            ["PREHEAT_1_TEMP_BED", 50],
+            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras)"],
             //standard leveling menu helper
             "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER",
-            //PLA Preheat Constants
-            ["PREHEAT_1_TEMP_HOTEND", 185],
-            ["PREHEAT_1_TEMP_BED", 45],
-            //Jyers UI by Jacob Myers
-            "DWIN_CREALITY_LCD_JYERSUI"
-        ],
-        disable: [
-            "LCD_BED_LEVELING",
-            "DWIN_CREALITY_LCD",
-            "DWIN_LCD_PROUI",
-            "DWIN_MARLINUI_PORTRAIT",
-            "DWIN_MARLINUI_LANDSCAPE"
+            "BED_TRAMMING_INCLUDE_CENTER"
         ]
     },
     configuration_adv: {
