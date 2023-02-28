@@ -2,7 +2,7 @@
 ## trying barebones default build but unfortunately after succesfull build it always fails at "creating release"
 ## with: "Request failed with status code 403" and "Error: Process completed with exit code 1."; I have no idea, what the problem is :/
 # Update: found the problem of failing at "creating release"
-## in order for marlin_auto_build to work as intended, you have to select Settings tab in your forked repository and select Actions / General. Then in Workflow permissions you have to select Read and Write permisions
+## in order for marlin_auto_build to work as intended, you have to select Settings tab in your forked repository and select Actions / General. Then in Workflow permissions you have to select Read and Write permisions (by default only read permissions are allowed)
 # Ender-3 4.2.2 firmware
 
 Automatic [Marlin](https://github.com/MarlinFirmware/Marlin) builds for the Ender-3 with the stock creality 4.2.2(512K) board.  
