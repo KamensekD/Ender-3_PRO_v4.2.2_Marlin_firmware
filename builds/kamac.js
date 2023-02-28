@@ -1,6 +1,6 @@
 module.exports = {
     board_env: "STM32F103RE_creality",
-    active: true,
+    active: false,
     only: "stable",
     meta: {
 //        stable_name: "ender3pro_v4.2.2-2.1.2-kamac-{{uid}}",
@@ -46,6 +46,3 @@ module.exports = {
         ]
     }
 };
-
-// trying barebones default build but unfortunately after succesfull build it always fails at "creating release"
-// with: "Request failed with status code 403" and "Error: Process completed with exit code 1."
