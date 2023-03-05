@@ -3,7 +3,7 @@ module.exports = {
 
     board_env: "STM32F103RE_creality",
     active: true,
-    only: "stable",   // build only stable branch
+    //only: "stable",   // build only stable branch
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
@@ -25,19 +25,7 @@ module.exports = {
     configuration:     {   // "Configuration.h" customizations
         enable: [
 
-            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, KamensekD)"],
-
-            //standard leveling menu helper
-            "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER"
-
-            //PLA Preheat Constants
-            ["PREHEAT_1_TEMP_HOTEND", 180],
-            ["PREHEAT_1_TEMP_BED", 50],
-            //ABS Preheat Constants
-            ["PREHEAT_2_TEMP_HOTEND", 225],
-            ["PREHEAT_2_TEMP_BED", 50]
-
+ 
         ]
     },
 
