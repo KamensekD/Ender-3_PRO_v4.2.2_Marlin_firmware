@@ -36,7 +36,7 @@ module.exports = {
             ["PREHEAT_1_TEMP_BED", 50],
             //ABS Preheat Constants
             ["PREHEAT_2_TEMP_HOTEND", 225],
-            ["PREHEAT_2_TEMP_BED", 50],
+            ["PREHEAT_2_TEMP_BED", 50]
 
         ]
     },
