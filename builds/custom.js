@@ -25,6 +25,20 @@ module.exports = {
     configuration:     {   // "Configuration.h" customizations
         enable: [
 
+            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, KamensekD)"],
+
+            //standard leveling menu helper
+            "LCD_BED_TRAMMING",
+            "BED_TRAMMING_INCLUDE_CENTER"
+
+            //Preheat Constants
+            ["PREHEAT_1_LABEL", "PLA"],
+            ["PREHEAT_1_TEMP_HOTEND", 200],
+            ["PREHEAT_1_TEMP_BED", 50],
+            
+            ["PREHEAT_2_LABEL", "PETG"],
+            ["PREHEAT_2_TEMP_HOTEND", 225],
+            ["PREHEAT_2_TEMP_BED", 50],
  
         ]
     },
