@@ -1,7 +1,9 @@
 # NOT TESTED YET - use with caution and at own risk!
+
 ### This is my take of zisismaras's marlin_auto_build to build Marlin firmware for Ender-3 Pro with 4.2.2 board
 
 _____
+
 # Ender-3 Pro v4.2.2 Marlin firmware
 
 Automatic [Marlin](https://github.com/MarlinFirmware/Marlin) builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
@@ -13,13 +15,15 @@ You can find firmware downloads on the repository [releases](https://github.com/
 
 ## Builds
 
-### default - the default Marlin configuration for Ender-3 Pro.
-with only these differences:
+### $${default{red}}$$ - the default Marlin configuration for Ender-3 Pro.
+
+with these minimal differences:
 - added Bed tramming menu to move around the corners
 - enables `HOST_ACTION_COMMANDS` for those, using octoprint.
 
 
-### customized - my custom firmware modifications that suit me and might or might not be good for you, so use with caution!
+### *custom* - my customized firmware modifications that suit me and might or might not be good for you, so use with caution!
+
 - added Bed tramming menu to move around the corners
 - enables `HOST_ACTION_COMMANDS` for those, using octoprint.
 - [linear advance](https://marlinfw.org/docs/features/lin_advance.html).     
@@ -34,13 +38,18 @@ The [M48 accuracy test](https://marlinfw.org/docs/gcode/M048.html) is also enabl
 - ...
 
 _____
+
 # Build you own firmware
 
 Check out [Marlin auto build](https://github.com/zisismaras/marlin_auto_build) if you want to build your own firmware automatically on github.
 
 ## Important: in case of having the problem of failing at "creating release"
+
 I had a lot of trouble before successfully building the first firmware release this way, but finally fount the cause.
 Before, after every succesfull build process failed at "creating release" with:
+
 ## "Request failed with status code 403" and "Error: Process completed with exit code 1."
+
 ## Solution:
+
 in order for marlin_auto_build to work as intended, you have to select Settings tab in your forked repository and select Actions / General. Then in Workflow permissions you have to select Read and Write permisions (by default only read permissions are allowed). After this change, everything worked without problems :)
