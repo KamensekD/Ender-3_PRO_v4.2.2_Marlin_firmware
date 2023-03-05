@@ -1,6 +1,6 @@
 # NOT TESTED YET - use with caution and at own risk!
 
-### This is my take of zisismaras's marlin_auto_build to build Marlin firmware for Ender-3 Pro with 4.2.2 board
+This is my take of zisismaras's **marlin_auto_build** to build customized Marlin firmware for **Ender-3 Pro** with **4.2.2** board
 
 _____
 
@@ -13,17 +13,21 @@ You can find firmware downloads on the repository [releases](https://github.com/
 * Make sure you have a 4.2.2 512K flash board before installing. Some newer models come with 256K of flash. You can read more [here](https://github.com/MarlinFirmware/Marlin/issues/23596). If your board is the 256K variant you can fork the repo and change the `board_env`.
 * All builds here use the default `A4988` stepper drivers, you can fork and change that if you have different ones. To find out which drivers you have there is a little marking on the sd card slot. More info [here](https://github.com/MarlinFirmware/Configurations/pull/633#issuecomment-995206382).
 
+<br>
+
 ## Builds
 
-### default - the default Marlin configuration for Ender-3 Pro.
-
-$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
-with these minimal differences:
+### `default`
+___
+the default Marlin configuration for Ender-3 Pro with these minimal differences:
 - added Bed tramming menu to move around the corners
 - enables `HOST_ACTION_COMMANDS` for those, using octoprint.
 
+<br><br>
 
-### *custom* - my customized firmware modifications that suit me and might or might not be good for you, so use with caution!
+### `custom`
+___
+my customized firmware modifications that suit me and might or might not be good for you, so use with caution!
 
 - added Bed tramming menu to move around the corners
 - enables `HOST_ACTION_COMMANDS` for those, using octoprint.
@@ -38,19 +42,18 @@ The build enables the offset wizard to simplify the Z-offset measurement.
 The [M48 accuracy test](https://marlinfw.org/docs/gcode/M048.html) is also enabled in case you want to test your probe.
 - ...
 
-_____
+<br><br>
 
 # Build you own firmware
 
 Check out [Marlin auto build](https://github.com/zisismaras/marlin_auto_build) if you want to build your own firmware automatically on github.
 
-## Important: in case of having the problem of failing at "creating release"
+## Important tip in case of building process failing at "creating release"
 
-I had a lot of trouble before successfully building the first firmware release this way, but finally fount the cause.
-Before, after every succesfull build process failed at "creating release" with:
+I had a lot of trouble before successfully building custom firmware release this way, because after every succesfull "build", process failed at "creating release" with:
 
-## "Request failed with status code 403" and "Error: Process completed with exit code 1."
+**"Request failed with status code 403"** and **"Error: Process completed with exit code 1."**
 
-## Solution:
+### Solution:
 
-in order for marlin_auto_build to work as intended, you have to select Settings tab in your forked repository and select Actions / General. Then in Workflow permissions you have to select Read and Write permisions (by default only read permissions are allowed). After this change, everything worked without problems :)
+in order for marlin_auto_build to work as intended, you have to select **Settings** tab in your repository and select **Actions / General**. Then you have to select **Read and Write permisions** (by default only read permissions are allowed) in **Workflow permissions**. After this change, everything worked without problems for me :)
