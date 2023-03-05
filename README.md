@@ -15,8 +15,9 @@ You can find firmware downloads on the repository [releases](https://github.com/
 
 ## Builds
 
-### $${default{red}}$$ - the default Marlin configuration for Ender-3 Pro.
+### default - the default Marlin configuration for Ender-3 Pro.
 
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
 with these minimal differences:
 - added Bed tramming menu to move around the corners
 - enables `HOST_ACTION_COMMANDS` for those, using octoprint.
