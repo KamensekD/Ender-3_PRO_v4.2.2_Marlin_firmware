@@ -5,7 +5,7 @@ module.exports = {
     active: true,
     only: "stable",   // build only stable branch
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{uid}}",
+        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
     },
 
