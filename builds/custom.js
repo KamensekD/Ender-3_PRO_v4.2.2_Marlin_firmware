@@ -29,7 +29,7 @@ module.exports = {
 
             //standard leveling menu helper
             "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER"
+            "BED_TRAMMING_INCLUDE_CENTER",
 
             //Preheat Constants
             ["PREHEAT_1_LABEL", "PLA"],
