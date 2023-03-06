@@ -28,6 +28,7 @@ module.exports = {
             
             
             ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, KamensekD)"],
+            ["CUSTOM_MACHINE_NAME",  q`Ender-3 Pro V1.5 4.2.2`],
 
             
             //Standard leveling menu helper
@@ -61,6 +62,35 @@ module.exports = {
             ["PREHEAT_2_TEMP_BED", 50],
  
             
+            //Enable Linear Advance and set default K to 0
+            "LIN_ADVANCE",
+            ["LIN_ADVANCE_K", 0],
+            "EXPERIMENTAL_SCURVE",
+            "ALLOW_LOW_EJERK"
+
+            
+            //Auto Level
+            ["GRID_MAX_POINTS_X", 5]
+            "BLTOUCH",
+            "AUTO_BED_LEVELING_BILINEAR",
+            "Z_SAFE_HOMING",
+            "USE_PROBE_FOR_Z_HOMING",
+            ["Z_MIN_PROBE_PIN", q`PB1`],
+            "LCD_BED_LEVELING",
+
+            ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
+            ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, 0]],
+            // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
+
+            //M48 test
+            "Z_MIN_PROBE_REPEATABILITY_TEST"
+
+        
+        ],
+        disable: [
+            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN"
+
+            
         ]
     },
 
@@ -68,13 +98,22 @@ module.exports = {
 
     configuration_adv: {   // "Configuration_adv.h" customizations
         enable: [
-
-            
+           
             
             //octoprint
             "HOST_ACTION_COMMANDS"
 
-            
+            // for Auto Level
+            "BABYSTEPPING",
+            "BABYSTEP_ZPROBE_OFFSET",
+            "PROBE_OFFSET_WIZARD",
+
+            //symmetrical
+            ["PROBING_MARGIN_LEFT", 20],
+            ["PROBING_MARGIN_RIGHT", 20],
+            ["PROBING_MARGIN_FRONT", 10],
+            ["PROBING_MARGIN_BACK", 10]
+        
             
         ]
     }
