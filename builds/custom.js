@@ -35,6 +35,7 @@ module.exports = {
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
             "SPEAKER",
+            "QUICK_HOME",
             
             //Stepper Driver Types
             //"Creality 4.2.2 boards come with a variety of stepper drivers.
@@ -59,8 +60,13 @@ module.exports = {
             ["Y_BED_SIZE", 235],
             ["X_MAX_POS", 250],  // so that probe can move closer to end of bed
             ["Y_MAX_POS", 235],
-            
-            
+            //["THERMAL_PROTECTION_BED_PERIOD",30],
+            //["THERMAL_PROTECTION_BED_HYSTERESIS",3],
+            //["WATCH_TEMP_PERIOD",30],
+            //["WATCH_TEMP_INCREASE",3],
+            //["WATCH_BED_TEMP_PERIOD",60],
+            //["WATCH_BED_TEMP_INCREASE",3],
+          
             "S_CURVE_ACCELERATION",
              
              
@@ -83,13 +89,6 @@ module.exports = {
             ["EXTRUDE_MAXLENGTH", 500],
             
             
-            //Enable Linear Advance and set default K to 0
-            "LIN_ADVANCE",
-            ["LIN_ADVANCE_K", 0],
-            "EXPERIMENTAL_SCURVE",
-            "ALLOW_LOW_EJERK",
-
-             
             //Adds the G12 command to perform a nozzle cleaning process
             "NOZZLE_CLEAN_FEATURE",
             
@@ -152,8 +151,27 @@ module.exports = {
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 10],
             ["PROBING_MARGIN_BACK", 10],
-        
+
             
+            //Enable Linear Advance and set default K to 0
+            "LIN_ADVANCE",
+            ["LIN_ADVANCE_K", 0],
+            "EXPERIMENTAL_SCURVE",
+            "ALLOW_LOW_EJERK",
+
+            //handles M108, M112, M410, M876 imidiately
+            "EMERGENCY_PARSER",
+
+            
+            "ASSISTED_TRAMMING",
+            "ASSISTED_TRAMMING_WIZARD",
+            "REPORT_TRAMMING_MM",
+
+            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`], // not sure!?
+            
+        ],
+        disable: [
+            "POWER_LOSS_RECOVERY",   //to save SD card
         ]
     }
 
