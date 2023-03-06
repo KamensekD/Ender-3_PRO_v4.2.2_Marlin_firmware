@@ -28,13 +28,13 @@ module.exports = {
             
             
             ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, KamensekD)"],
-            ["CUSTOM_MACHINE_NAME",  q`Ender-3 Pro V1.5 4.2.2`],
+            ["CUSTOM_MACHINE_NAME",  "Ender-3 Pro V1.5 4.2.2"],
 
             
             //Standard leveling menu helper
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
-
+            "SPEAKER",
             
             //Stepper Driver Types
             //"Creality 4.2.2 boards come with a variety of stepper drivers.
@@ -50,8 +50,20 @@ module.exports = {
             ["Y_DRIVER_TYPE",  q`A4988`],
             ["Z_DRIVER_TYPE",  q`A4988`],
             ["E0_DRIVER_TYPE", q`A4988`],
+      
+            
+            //Defaults
+            ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
+            ["DEFAULT_TRAVEL_ACCELERATION, 500],
+            ["X_BED_SIZE, 235],
+            ["Y_BED_SIZE, 235],
+            ["X_MAX_POS, 250],  // so that probe can move closer to end of bed
+            ["Y_MAX_POS, 235],
             
             
+            "S_CURVE_ACCELERATION",
+             
+             
             //Preheat Constants
             ["PREHEAT_1_LABEL", "PLA"],
             ["PREHEAT_1_TEMP_HOTEND", 200],
@@ -60,7 +72,16 @@ module.exports = {
             ["PREHEAT_2_LABEL", "PETG"],
             ["PREHEAT_2_TEMP_HOTEND", 225],
             ["PREHEAT_2_TEMP_BED", 50],
+
+            ["PREHEAT_3_LABEL", "pre-heat"],
+            ["PREHEAT_3_TEMP_HOTEND", 180],
+            ["PREHEAT_3_TEMP_BED", 40],
  
+            
+            //prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
+            "PREVENT_LENGTHY_EXTRUDE",
+            ["EXTRUDE_MAXLENGTH", 500],
+            
             
             //Enable Linear Advance and set default K to 0
             "LIN_ADVANCE",
@@ -68,15 +89,28 @@ module.exports = {
             "EXPERIMENTAL_SCURVE",
             "ALLOW_LOW_EJERK",
 
+             
+            //Adds the G12 command to perform a nozzle cleaning process
+            "NOZZLE_CLEAN_FEATURE",
             
+             
             //Auto Level
             ["GRID_MAX_POINTS_X", 5],
             "BLTOUCH",
             "AUTO_BED_LEVELING_BILINEAR",
+//            "AUTO_BED_LEVELING_UBL",
             "Z_SAFE_HOMING",
             "USE_PROBE_FOR_Z_HOMING",
             ["Z_MIN_PROBE_PIN", q`PB1`],
             "LCD_BED_LEVELING",
+            ["XY_PROBE_FEEDRATE", q`(150*60)`],
+            ["Z_PROBE_FEEDRATE_FAST", q`(6*60)`],
+            ["Z_PROBE_FEEDRATE_SLOW", q`(Z_PROBE_FEEDRATE_FAST / 2)`],
+            "PREHEAT_BEFORE_LEVELING",
+            ["LEVELING_NOZZLE_TEMP", 180],
+            ["LEVELING_BED_TEMP", 50],
+            ["MESH_INSET, 5],   // Set Mesh bounds as an inset region of the bed
+
 
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
             ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, 0]],
@@ -85,6 +119,11 @@ module.exports = {
             //M48 test
             "Z_MIN_PROBE_REPEATABILITY_TEST",
 
+            
+            //LCD Menu options
+            "PID_EDIT_MENU",         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
+            "PID_AUTOTUNE_MENU",     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+            
         
         ],
         disable: [
