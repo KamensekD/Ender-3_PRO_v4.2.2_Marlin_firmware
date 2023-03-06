@@ -66,11 +66,11 @@ module.exports = {
             "LIN_ADVANCE",
             ["LIN_ADVANCE_K", 0],
             "EXPERIMENTAL_SCURVE",
-            "ALLOW_LOW_EJERK"
+            "ALLOW_LOW_EJERK",
 
             
             //Auto Level
-            ["GRID_MAX_POINTS_X", 5]
+            ["GRID_MAX_POINTS_X", 5],
             "BLTOUCH",
             "AUTO_BED_LEVELING_BILINEAR",
             "Z_SAFE_HOMING",
@@ -83,12 +83,12 @@ module.exports = {
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
 
             //M48 test
-            "Z_MIN_PROBE_REPEATABILITY_TEST"
+            "Z_MIN_PROBE_REPEATABILITY_TEST",
 
         
         ],
         disable: [
-            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN"
+            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
 
             
         ]
@@ -101,7 +101,7 @@ module.exports = {
            
             
             //octoprint
-            "HOST_ACTION_COMMANDS"
+            "HOST_ACTION_COMMANDS",
 
             // for Auto Level
             "BABYSTEPPING",
@@ -112,7 +112,7 @@ module.exports = {
             ["PROBING_MARGIN_LEFT", 20],
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 10],
-            ["PROBING_MARGIN_BACK", 10]
+            ["PROBING_MARGIN_BACK", 10],
         
             
         ]
