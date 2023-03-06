@@ -54,11 +54,11 @@ module.exports = {
             
             //Defaults
             ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
-            ["DEFAULT_TRAVEL_ACCELERATION, 500],
-            ["X_BED_SIZE, 235],
-            ["Y_BED_SIZE, 235],
-            ["X_MAX_POS, 250],  // so that probe can move closer to end of bed
-            ["Y_MAX_POS, 235],
+            ["DEFAULT_TRAVEL_ACCELERATION", 500],
+            ["X_BED_SIZE", 235],
+            ["Y_BED_SIZE", 235],
+            ["X_MAX_POS", 250],  // so that probe can move closer to end of bed
+            ["Y_MAX_POS", 235],
             
             
             "S_CURVE_ACCELERATION",
@@ -109,7 +109,7 @@ module.exports = {
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 180],
             ["LEVELING_BED_TEMP", 50],
-            ["MESH_INSET, 5],   // Set Mesh bounds as an inset region of the bed
+            ["MESH_INSET", 5],   // Set Mesh bounds as an inset region of the bed
 
 
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
