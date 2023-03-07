@@ -62,6 +62,7 @@ module.exports = {
             "PID_AUTOTUNE_MENU",     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
             "LCD_BED_LEVELING",
             "LCD_BED_TRAMMING",
+            "MESH_EDIT_MENU",
 
             
             //Enable speaker
