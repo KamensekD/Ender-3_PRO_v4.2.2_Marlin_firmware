@@ -31,22 +31,30 @@ module.exports = {
 
 
             //Defaults
-            ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
-            ["DEFAULT_TRAVEL_ACCELERATION", 500],
             ["X_BED_SIZE", 235],
             ["Y_BED_SIZE", 235],
-            ["X_MAX_POS", 250],  // so that probe can move closer to end of bed
-            ["Y_MAX_POS", 235],
+            ["X_MAX_POS", 250],  // max for my machine
+            ["Y_MAX_POS", 241],  // max for my machine
+
+            ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
+            ["DEFAULT_MAX_FEEDRATE", [500, 500, 25, 50]],        // Default Max Feed Rate (mm/s)
+            ["DEFAULT_MAX_ACCELERATION", [500, 500, 100, 2500]],        // Default Max Feed Rate (mm/s)
+            ["DEFAULT_ACCELERATION", 250],                       // X, Y, Z ... and E acceleration for printing moves
+            ["DEFAULT_TRAVEL_ACCELERATION", 500],                // X, Y, Z ... acceleration for travel (non printing) moves
+            ["DEFAULT_RETRACT_ACCELERATION", 1000],              // E acceleration for retracts
 
 
             //Preheat Constants
             ["PREHEAT_1_LABEL", "PLA"],
             ["PREHEAT_1_TEMP_HOTEND", 200],
             ["PREHEAT_1_TEMP_BED", 50],
+            ["PREHEAT_1_FAN_SPEED", 0],
 
+            
             ["PREHEAT_2_LABEL", "PETG"],
             ["PREHEAT_2_TEMP_HOTEND", 225],
             ["PREHEAT_2_TEMP_BED", 50],
+            ["PREHEAT_2_FAN_SPEED", 0],
 
             //["PREHEAT_3_LABEL", "pre-heat"],
             //["PREHEAT_3_TEMP_HOTEND", 180],
@@ -95,12 +103,12 @@ module.exports = {
 
 
             //Auto Level settings
-            ["GRID_MAX_POINTS_X", 5],
+            ["GRID_MAX_POINTS_X", 5],            // number of points in x direction
+            ["MESH_INSET", 1],                   // Set Mesh bounds as an inset region of the bed
 
             "BLTOUCH",
             ["Z_MIN_PROBE_PIN", q`PB1`],
 
-//            "AUTO_BED_LEVELING_BILINEAR",
             "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
 
             "Z_SAFE_HOMING",
@@ -108,18 +116,19 @@ module.exports = {
 
             ["XY_PROBE_FEEDRATE", q`(150*60)`],
             ["Z_PROBE_FEEDRATE_FAST", q`(6*60)`],
-            ["Z_PROBE_FEEDRATE_SLOW", q`(Z_PROBE_FEEDRATE_FAST / 2)`],
+            ["Z_PROBE_FEEDRATE_SLOW", q`(3*60)`],
 
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 180],
             ["LEVELING_BED_TEMP", 50],
 
-            ["MESH_INSET", 5],                   // Set Mesh bounds as an inset region of the bed
             ["Z_CLEARANCE_DEPLOY_PROBE", 5],     // Z Clearance for Deploy/Stow
-            ["Z_CLEARANCE_BETWEEN_PROBES", 4],
+            ["Z_CLEARANCE_BETWEEN_PROBES", 3],
+            ["Z_CLEARANCE_MULTI_PROBE", 3],
+                 
 
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
-            ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1]],
+            ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1.5]],
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
 
 
@@ -151,22 +160,23 @@ module.exports = {
 
 
             //for Auto Level
+            ["PROBING_MARGIN_LEFT", 20],
+            ["PROBING_MARGIN_RIGHT", 20],
+            ["PROBING_MARGIN_FRONT", 20],
+            ["PROBING_MARGIN_BACK", 20],
+
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
             "PROBE_OFFSET_WIZARD",
+            "UBL_MESH_WIZARD",
 
-            ["PROBING_MARGIN_LEFT", 20],
-            ["PROBING_MARGIN_RIGHT", 20],
-            ["PROBING_MARGIN_FRONT", 10],
-            ["PROBING_MARGIN_BACK", 10],
-//
             "ASSISTED_TRAMMING",
             "ASSISTED_TRAMMING_WIZARD",
             "REPORT_TRAMMING_MM",
-//
-            //Enable Linear Advance and set default K to 0
+
+            //Enable Linear Advance and set default K to 0.5
             "LIN_ADVANCE",
-            ["ADVANCE_K", 0],
+            ["ADVANCE_K", 0.5],
             "EXPERIMENTAL_SCURVE",
             "ALLOW_LOW_EJERK",
 
