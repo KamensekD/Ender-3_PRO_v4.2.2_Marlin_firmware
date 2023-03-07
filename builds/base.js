@@ -4,8 +4,8 @@ module.exports = {
     //active: false,    // disable this build
     //only: "stable",   // build only stable or nightly branch
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-default-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-default-{{uid}}"
+        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
     },
 
     based_on: {   // default Ender-3 Pro Marlin example config
@@ -20,12 +20,12 @@ module.exports = {
         enable: [
 
 
-            ["STRING_CONFIG_H_AUTHOR", "(Ender-3 Pro)"],
+//            ["STRING_CONFIG_H_AUTHOR", "(Ender-3 Pro)"],
 
 
             //standard leveling menu helper
-            "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER",
+//            "LCD_BED_TRAMMING",
+//            "BED_TRAMMING_INCLUDE_CENTER",
 
         ]
     },
@@ -37,7 +37,7 @@ module.exports = {
 
 
             //for OctoPrint
-            "HOST_ACTION_COMMANDS",
+//            "HOST_ACTION_COMMANDS",
 
 
         ]
