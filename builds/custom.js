@@ -126,12 +126,14 @@ module.exports = {
             ["Z_CLEARANCE_DEPLOY_PROBE", 5],     // Z Clearance for Deploy/Stow
             ["Z_CLEARANCE_BETWEEN_PROBES", 4],
 
-
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
             ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1]],
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
 
+
+            //Bed Tramming also center point
             "BED_TRAMMING_INCLUDE_CENTER",
+
 
             //M48 test
             "Z_MIN_PROBE_REPEATABILITY_TEST",
@@ -165,11 +167,11 @@ module.exports = {
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 10],
             ["PROBING_MARGIN_BACK", 10],
-
-//            "ASSISTED_TRAMMING",
-//            "ASSISTED_TRAMMING_WIZARD",
-//            "REPORT_TRAMMING_MM",
-
+//
+            "ASSISTED_TRAMMING",
+            "ASSISTED_TRAMMING_WIZARD",
+            "REPORT_TRAMMING_MM",
+//
             //Enable Linear Advance and set default K to 0
             "LIN_ADVANCE",
             ["ADVANCE_K", 0],
@@ -180,10 +182,12 @@ module.exports = {
             //handles M108, M112, M410, M876 imidiately
             "EMERGENCY_PARSER",
 
+
             // If G28 contains XY do a diagonal move first
             "QUICK_HOME",
 
-             // my Ender 3 Pro has 24V power supply, for some reason default for E3P was 12V?
+
+            // my Ender 3 Pro has 24V power supply, for some reason default for E3P was 12V?
             ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`],
 
 
