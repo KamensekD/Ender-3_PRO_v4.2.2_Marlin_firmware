@@ -15,16 +15,18 @@ module.exports = {
         nightly_branch: "bugfix-2.1.x"    // latest nightly
     },
 
-    
-    
+
     configuration:     {   // "Configuration.h" customizations
         enable: [
 
-            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, KamensekD)"],
+
+            ["STRING_CONFIG_H_AUTHOR", "(Ender-3 Pro)"],
+
 
             //standard leveling menu helper
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER"
+
 
         ]
     },
@@ -34,12 +36,11 @@ module.exports = {
     configuration_adv: {   // "Configuration_adv.h" customizations
         enable: [
 
-            //octoprint
+
+            //for octoprint
             "HOST_ACTION_COMMANDS"
+
 
         ]
     }
-
-    
-
 };
