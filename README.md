@@ -17,11 +17,9 @@ You can find firmware downloads on the repository [releases](https://github.com/
 
 ## Builds
 
-### `default`
+### `base`
 ___
-the default Marlin configuration for Ender-3 Pro with these minimal differences:
-- added Bed tramming menu to move around the corners
-- enables `HOST_ACTION_COMMANDS` for those, using octoprint.
+the default Marlin configuration for Ender-3 Pro
 
 <br><br>
 
@@ -47,6 +45,7 @@ There are also numerous videos on youtube.
 - enables `HOST_ACTION_COMMANDS` for those, using [OctoPrint](https://octoprint.org/),
 - disables Continue after Power-Loss to increase SD card life,
 - enables Emergency Parser for [M108](https://marlinfw.org/docs/gcode/M108.html), [M112](https://marlinfw.org/docs/gcode/M112.html), [M410](https://marlinfw.org/docs/gcode/M140.html), [M876](https://marlinfw.org/docs/gcode/M876.html),  
+- changes some Thermal protection settings,  
 - adds/changes/enforces some other settings:  
 DEFAULT_TRAVEL_ACCELERATION 500, DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 400, 100 },  
 S_CURVE_ACCELERATION, XY_PROBE_FEEDRATE (150*60), Z_PROBE_FEEDRATE_FAST (6*60),  
