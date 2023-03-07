@@ -20,21 +20,53 @@ module.exports = {
     },
 
     
-                           // refer to:   https://github.com/zisismaras/marlin_auto_build
-                           // for valid syntax
+                           // for valid syntax refer to:          https://github.com/zisismaras/marlin_auto_build
     configuration:     {   // "Configuration.h" customizations
         enable: [
 
             
-            
-            ["STRING_CONFIG_H_AUTHOR", "(Dust, valerionew, Ender-3, zisismaras, KamensekD)"],
-            ["CUSTOM_MACHINE_NAME",  "Ender-3 Pro V1.5 4.2.2"],
+            ["STRING_CONFIG_H_AUTHOR", "(zisismaras, KamensekD)"],
+            ["CUSTOM_MACHINE_NAME",  "Ender-3 Pro v4.2.2"],
 
             
-            //Standard leveling menu helper
+            //Defaults
+            ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
+            ["DEFAULT_TRAVEL_ACCELERATION", 500],
+            ["X_BED_SIZE", 235],
+            ["Y_BED_SIZE", 235],
+            ["X_MAX_POS", 250],  // so that probe can move closer to end of bed
+            ["Y_MAX_POS", 235],
+
+            
+            //Preheat Constants
+            ["PREHEAT_1_LABEL", "PLA"],
+            ["PREHEAT_1_TEMP_HOTEND", 200],
+            ["PREHEAT_1_TEMP_BED", 50],
+            
+            ["PREHEAT_2_LABEL", "PETG"],
+            ["PREHEAT_2_TEMP_HOTEND", 225],
+            ["PREHEAT_2_TEMP_BED", 50],
+
+            //["PREHEAT_3_LABEL", "pre-heat"],
+            //["PREHEAT_3_TEMP_HOTEND", 180],
+            //["PREHEAT_3_TEMP_BED", 40],
+
+            
+            //prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
+            "PREVENT_LENGTHY_EXTRUDE",
+            ["EXTRUDE_MAXLENGTH", 500],
+
+
+            //LCD Menu options
+            "PID_EDIT_MENU",         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
+            "PID_AUTOTUNE_MENU",     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+            "LCD_BED_LEVELING",
             "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER",
+
+            
+            //Enable speaker
             "SPEAKER",
+
             
             //Stepper Driver Types
             //"Creality 4.2.2 boards come with a variety of stepper drivers.
@@ -51,62 +83,44 @@ module.exports = {
             ["Z_DRIVER_TYPE",  q`A4988`],
             ["E0_DRIVER_TYPE", q`A4988`],
       
-            
-            //Defaults
-            ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
-            ["DEFAULT_TRAVEL_ACCELERATION", 500],
-            ["X_BED_SIZE", 235],
-            ["Y_BED_SIZE", 235],
-            ["X_MAX_POS", 250],  // so that probe can move closer to end of bed
-            ["Y_MAX_POS", 235],
+
+            //Thermal protection settings            
             //["THERMAL_PROTECTION_BED_PERIOD",30],
             //["THERMAL_PROTECTION_BED_HYSTERESIS",3],
             //["WATCH_TEMP_PERIOD",30],
             //["WATCH_TEMP_INCREASE",3],
             //["WATCH_BED_TEMP_PERIOD",60],
             //["WATCH_BED_TEMP_INCREASE",3],
-          
-            "S_CURVE_ACCELERATION",
-             
-             
-            //Preheat Constants
-            ["PREHEAT_1_LABEL", "PLA"],
-            ["PREHEAT_1_TEMP_HOTEND", 200],
-            ["PREHEAT_1_TEMP_BED", 50],
-            
-            ["PREHEAT_2_LABEL", "PETG"],
-            ["PREHEAT_2_TEMP_HOTEND", 225],
-            ["PREHEAT_2_TEMP_BED", 50],
 
-            //["PREHEAT_3_LABEL", "pre-heat"],
-            //["PREHEAT_3_TEMP_HOTEND", 180],
-            //["PREHEAT_3_TEMP_BED", 40],
- 
-            
-            //prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
-            "PREVENT_LENGTHY_EXTRUDE",
-            ["EXTRUDE_MAXLENGTH", 500],
+          
+            //eliminates vibration during printing by fitting a Bézier curve to move acceleration
+            "S_CURVE_ACCELERATION",
             
             
             //Adds the G12 command to perform a nozzle cleaning process
             "NOZZLE_CLEAN_FEATURE",
             
              
-            //Auto Level
+            //Auto Level settings
             ["GRID_MAX_POINTS_X", 5],
+
             "BLTOUCH",
-            "AUTO_BED_LEVELING_BILINEAR",
-//            "AUTO_BED_LEVELING_UBL",
+            ["Z_MIN_PROBE_PIN", q`PB1`],
+
+//            "AUTO_BED_LEVELING_BILINEAR",
+            "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
+
             "Z_SAFE_HOMING",
             "USE_PROBE_FOR_Z_HOMING",
-            ["Z_MIN_PROBE_PIN", q`PB1`],
-            "LCD_BED_LEVELING",
+
             ["XY_PROBE_FEEDRATE", q`(150*60)`],
             ["Z_PROBE_FEEDRATE_FAST", q`(6*60)`],
             ["Z_PROBE_FEEDRATE_SLOW", q`(Z_PROBE_FEEDRATE_FAST / 2)`],
+
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 180],
             ["LEVELING_BED_TEMP", 50],
+
             ["MESH_INSET", 5],                   // Set Mesh bounds as an inset region of the bed
             ["Z_CLEARANCE_DEPLOY_PROBE", 5],     // Z Clearance for Deploy/Stow
 
@@ -114,17 +128,16 @@ module.exports = {
             ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, 0]],
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
 
+            "BED_TRAMMING_INCLUDE_CENTER",
+
             //M48 test
             "Z_MIN_PROBE_REPEATABILITY_TEST",
 
             
-            //LCD Menu options
-            "PID_EDIT_MENU",         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
-            "PID_AUTOTUNE_MENU",     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
-            
-        
         ],
         disable: [
+
+            
             "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
 
             
@@ -132,24 +145,27 @@ module.exports = {
     },
 
     
-
     configuration_adv: {   // "Configuration_adv.h" customizations
         enable: [
            
             
-            //octoprint
+            //for Octoprint
             "HOST_ACTION_COMMANDS",
 
-            // for Auto Level
+            
+            //for Auto Level
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
             "PROBE_OFFSET_WIZARD",
-
-            //symmetrical
+            
             ["PROBING_MARGIN_LEFT", 20],
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 10],
             ["PROBING_MARGIN_BACK", 10],
+
+            "ASSISTED_TRAMMING",
+            "ASSISTED_TRAMMING_WIZARD",
+            "REPORT_TRAMMING_MM",
 
             
             //Enable Linear Advance and set default K to 0
@@ -158,25 +174,25 @@ module.exports = {
             "EXPERIMENTAL_SCURVE",
             "ALLOW_LOW_EJERK",
 
+            
             //handles M108, M112, M410, M876 imidiately
             "EMERGENCY_PARSER",
 
             
-            "ASSISTED_TRAMMING",
-            "ASSISTED_TRAMMING_WIZARD",
-            "REPORT_TRAMMING_MM",
+            "QUICK_HOME",  // If G28 contains XY do a diagonal move first
 
-            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`], // my Ender 3 Pro has 24V power supply, for some reason default was 12V?
-
-            "QUICK_HOME",
+            
+            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`], // my Ender 3 Pro has 24V power supply, for some reason default for E3P was 12V?
 
             
         ],
         disable: [
-            "POWER_LOSS_RECOVERY",   //to save SD card
+
+            
+            "POWER_LOSS_RECOVERY",   //disable this to save SD card writes for each layer
+
+        
         ]
     }
-
-    
 
 };
