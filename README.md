@@ -1,4 +1,4 @@
-## NOT TESTED YET - use with caution and at own risk!
+## PARTLY TESTED - "Stable version doesn't seem to install, bugfixed Nightly version seems to work OK!" - use with caution and at own risk!
 
 This is my take of zisismaras's **marlin_auto_build** to build customized Marlin firmware for **Ender-3 Pro** with **4.2.2** board
 
