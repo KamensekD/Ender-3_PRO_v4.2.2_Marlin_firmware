@@ -29,14 +29,14 @@ the default Marlin configuration for Ender-3 Pro with these minimal differences:
 ___
 my customized firmware modifications that suit me and might or might not be good for you, so use with caution!
 
-- added Bed tramming menu to move around the corners
+- added misc options to menu - Bed tramming, PID Edit, Mesh Edit, Autotune, 
 - enables `HOST_ACTION_COMMANDS` for those, using octoprint.
 - [linear advance](https://marlinfw.org/docs/features/lin_advance.html).     
 Linear advance `K factor` is set to `0`. You can read the marlin docs on how to find and set a good value. There are also numerous videos on youtube.  
-- [automatic leveling](https://marlinfw.org/docs/gcode/G029-abl-bilinear.html)  
+- [UBL automatic leveling on 5x5 mesh](https://marlinfw.org/docs/gcode/G029-ubl.html)  
 **Note**: Only tested with a 3D-touch (CR-touch and BL-touch should work as well)
-The grid is configured to be symmetrical with 45mm margin on left and right and 15mm on front and back.  
-All probe offsets are set to `0`. There are a lot of videos on how to measure and set them.  
+The grid is configured to be symmetrical with 20mm margin on left and right and 10mm on front and back.  
+Probe offsets are set to my probe, which is `-27, 0, -1`. There are a lot of videos on how to measure and set/change them.  
 The build enables the offset wizard to simplify the Z-offset measurement.  
 **Important**: The build assumes you are using the dedicated BL-touch port on the board and you have the Z-stop disconnected.
 The [M48 accuracy test](https://marlinfw.org/docs/gcode/M048.html) is also enabled in case you want to test your probe.
