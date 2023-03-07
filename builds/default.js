@@ -1,11 +1,11 @@
 module.exports = {
 
     board_env: "STM32F103RE_creality",
-    active: false,
-    //only: "stable",   // build only stable branch
+    //active: false,    // disable this build
+    //only: "stable",   // build only stable or nightly branch
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-default-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-default-{{uid}}"
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}-default_nightly-{{uid}}"
     },
 
     based_on: {   // default Ender-3 Pro Marlin example config
