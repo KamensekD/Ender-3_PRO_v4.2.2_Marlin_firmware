@@ -124,9 +124,11 @@ module.exports = {
 
             ["MESH_INSET", 5],                   // Set Mesh bounds as an inset region of the bed
             ["Z_CLEARANCE_DEPLOY_PROBE", 5],     // Z Clearance for Deploy/Stow
-
+            ["Z_CLEARANCE_BETWEEN_PROBES", 4],
+ 
+            
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
-            ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, 0]],
+            ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1]],
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
 
             "BED_TRAMMING_INCLUDE_CENTER",
