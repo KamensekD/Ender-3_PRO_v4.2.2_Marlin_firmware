@@ -4,8 +4,8 @@ module.exports = {
     //active: false,
     only: "nightly",   // build only nightly branch
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
+        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom_nightly-{{current_date}}",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom_nightly-{{uid}}"
     },
 
     based_on: {   // default Ender-3 Pro Marlin example config
