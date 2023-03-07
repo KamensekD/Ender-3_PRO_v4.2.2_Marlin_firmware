@@ -1,8 +1,8 @@
 module.exports = {
 
     board_env: "STM32F103RE_creality",
-    active: false,
-    only: "stable",   // build only stable branch
+    //active: false,    // disable this build
+    only: "stable",   // build only stable or nightly branch
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
@@ -83,15 +83,6 @@ module.exports = {
             ["Y_DRIVER_TYPE",  q`A4988`],
             ["Z_DRIVER_TYPE",  q`A4988`],
             ["E0_DRIVER_TYPE", q`A4988`],
-
-
-            //Thermal protection settings            
-            //["THERMAL_PROTECTION_BED_PERIOD",30],
-            //["THERMAL_PROTECTION_BED_HYSTERESIS",3],
-            //["WATCH_TEMP_PERIOD",30],
-            //["WATCH_TEMP_INCREASE",3],
-            //["WATCH_BED_TEMP_PERIOD",60],
-            //["WATCH_BED_TEMP_INCREASE",3],
 
 
             //eliminates vibration during printing by fitting a Bézier curve to move acceleration
@@ -185,6 +176,15 @@ module.exports = {
 
             // If G28 contains XY do a diagonal move first
             "QUICK_HOME",
+
+
+            //Thermal protection settings            
+            ["THERMAL_PROTECTION_BED_PERIOD",30],
+            ["THERMAL_PROTECTION_BED_HYSTERESIS",3],
+            ["WATCH_TEMP_PERIOD",30],
+            ["WATCH_TEMP_INCREASE",3],
+            ["WATCH_BED_TEMP_PERIOD",60],
+            ["WATCH_BED_TEMP_INCREASE",3],
 
 
             // my Ender 3 Pro has 24V power supply, for some reason default for E3P was 12V?
