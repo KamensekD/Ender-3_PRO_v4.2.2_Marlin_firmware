@@ -37,7 +37,7 @@ module.exports = {
         enable: [
 
 
-            //for octoprint
+            //for OctoPrint
             "HOST_ACTION_COMMANDS"
 
 
