@@ -19,16 +19,16 @@ module.exports = {
 //        nightly_branch: "master"
     },
 
-    
+
                            // for valid syntax refer to:          https://github.com/zisismaras/marlin_auto_build
     configuration:     {   // "Configuration.h" customizations
         enable: [
 
-            
+
             ["STRING_CONFIG_H_AUTHOR", "(zisismaras, KamensekD)"],
             ["CUSTOM_MACHINE_NAME",  "Ender-3 Pro v4.2.2"],
 
-            
+
             //Defaults
             ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
             ["DEFAULT_TRAVEL_ACCELERATION", 500],
@@ -37,12 +37,12 @@ module.exports = {
             ["X_MAX_POS", 250],  // so that probe can move closer to end of bed
             ["Y_MAX_POS", 235],
 
-            
+
             //Preheat Constants
             ["PREHEAT_1_LABEL", "PLA"],
             ["PREHEAT_1_TEMP_HOTEND", 200],
             ["PREHEAT_1_TEMP_BED", 50],
-            
+
             ["PREHEAT_2_LABEL", "PETG"],
             ["PREHEAT_2_TEMP_HOTEND", 225],
             ["PREHEAT_2_TEMP_BED", 50],
@@ -51,7 +51,7 @@ module.exports = {
             //["PREHEAT_3_TEMP_HOTEND", 180],
             //["PREHEAT_3_TEMP_BED", 40],
 
-            
+
             //prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
             "PREVENT_LENGTHY_EXTRUDE",
             ["EXTRUDE_MAXLENGTH", 500],
@@ -64,11 +64,11 @@ module.exports = {
             "LCD_BED_TRAMMING",
             "MESH_EDIT_MENU",
 
-            
+
             //Enable speaker
             "SPEAKER",
 
-            
+
             //Stepper Driver Types
             //"Creality 4.2.2 boards come with a variety of stepper drivers.
             //Check the board label (typically on SD Card module) and set the correct *_DRIVER_TYPE!
@@ -83,7 +83,7 @@ module.exports = {
             ["Y_DRIVER_TYPE",  q`A4988`],
             ["Z_DRIVER_TYPE",  q`A4988`],
             ["E0_DRIVER_TYPE", q`A4988`],
-      
+
 
             //Thermal protection settings            
             //["THERMAL_PROTECTION_BED_PERIOD",30],
@@ -93,15 +93,15 @@ module.exports = {
             //["WATCH_BED_TEMP_PERIOD",60],
             //["WATCH_BED_TEMP_INCREASE",3],
 
-          
+
             //eliminates vibration during printing by fitting a Bézier curve to move acceleration
             "S_CURVE_ACCELERATION",
-            
-            
+
+
             //Adds the G12 command to perform a nozzle cleaning process
             "NOZZLE_CLEAN_FEATURE",
-            
-             
+
+
             //Auto Level settings
             ["GRID_MAX_POINTS_X", 5],
 
@@ -125,8 +125,8 @@ module.exports = {
             ["MESH_INSET", 5],                   // Set Mesh bounds as an inset region of the bed
             ["Z_CLEARANCE_DEPLOY_PROBE", 5],     // Z Clearance for Deploy/Stow
             ["Z_CLEARANCE_BETWEEN_PROBES", 4],
- 
-            
+
+
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
             ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1]],
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
@@ -136,44 +136,47 @@ module.exports = {
             //M48 test
             "Z_MIN_PROBE_REPEATABILITY_TEST",
 
-            
+
         ],
         disable: [
 
-            
+
             "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
 
-            
+
         ]
     },
 
-    
+
     configuration_adv: {   // "Configuration_adv.h" customizations
         enable: [
-           
-            
+
+
             //for Octoprint
             "HOST_ACTION_COMMANDS",
 
-            
-            
-            
-            
-            
-            
+
             //for Auto Level
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
             "PROBE_OFFSET_WIZARD",
-            
+
             ["PROBING_MARGIN_LEFT", 20],
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 10],
             ["PROBING_MARGIN_BACK", 10],
 
+//            "ASSISTED_TRAMMING",
+//            "ASSISTED_TRAMMING_WIZARD",
+//            "REPORT_TRAMMING_MM",
 
-////
-            
+            //Enable Linear Advance and set default K to 0
+            "LIN_ADVANCE",
+            ["ADVANCE_K", 0],
+            "EXPERIMENTAL_SCURVE",
+            "ALLOW_LOW_EJERK",
+
+
             //handles M108, M112, M410, M876 imidiately
             "EMERGENCY_PARSER",
 
@@ -184,24 +187,13 @@ module.exports = {
             ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`],
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         ],
         disable: [
 
-            
+
             "POWER_LOSS_RECOVERY",   //disable this to save SD card writes for each layer
 
-        
+
         ]
     }
 
