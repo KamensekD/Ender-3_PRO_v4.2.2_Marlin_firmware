@@ -1,7 +1,7 @@
 module.exports = {
 
     board_env: "STM32F103RE_creality",
-    active: false,
+    //active: false,
     //only: "stable",   // build only stable branch
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
@@ -155,39 +155,7 @@ module.exports = {
             //for Octoprint
             "HOST_ACTION_COMMANDS",
 
-            
-            //for Auto Level
-            "BABYSTEPPING",
-            "BABYSTEP_ZPROBE_OFFSET",
-            "PROBE_OFFSET_WIZARD",
-            
-            ["PROBING_MARGIN_LEFT", 20],
-            ["PROBING_MARGIN_RIGHT", 20],
-            ["PROBING_MARGIN_FRONT", 10],
-            ["PROBING_MARGIN_BACK", 10],
-
-            "ASSISTED_TRAMMING",
-            "ASSISTED_TRAMMING_WIZARD",
-            "REPORT_TRAMMING_MM",
-
-            
-            //Enable Linear Advance and set default K to 0
-            "LIN_ADVANCE",
-            ["ADVANCE_K", 0],
-            "EXPERIMENTAL_SCURVE",
-            "ALLOW_LOW_EJERK",
-
-            
-            //handles M108, M112, M410, M876 imidiately
-            "EMERGENCY_PARSER",
-
-            
-            "QUICK_HOME",  // If G28 contains XY do a diagonal move first
-
-            
-            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`], // my Ender 3 Pro has 24V power supply, for some reason default for E3P was 12V?
-
-            
+/////            
         ],
         disable: [
 
