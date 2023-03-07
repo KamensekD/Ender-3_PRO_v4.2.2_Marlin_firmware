@@ -35,7 +35,6 @@ module.exports = {
             "LCD_BED_TRAMMING",
             "BED_TRAMMING_INCLUDE_CENTER",
             "SPEAKER",
-            "QUICK_HOME",
             
             //Stepper Driver Types
             //"Creality 4.2.2 boards come with a variety of stepper drivers.
@@ -79,9 +78,9 @@ module.exports = {
             ["PREHEAT_2_TEMP_HOTEND", 225],
             ["PREHEAT_2_TEMP_BED", 50],
 
-            ["PREHEAT_3_LABEL", "pre-heat"],
-            ["PREHEAT_3_TEMP_HOTEND", 180],
-            ["PREHEAT_3_TEMP_BED", 40],
+            //["PREHEAT_3_LABEL", "pre-heat"],
+            //["PREHEAT_3_TEMP_HOTEND", 180],
+            //["PREHEAT_3_TEMP_BED", 40],
  
             
             //prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -108,8 +107,8 @@ module.exports = {
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 180],
             ["LEVELING_BED_TEMP", 50],
-            ["MESH_INSET", 5],   // Set Mesh bounds as an inset region of the bed
-
+            ["MESH_INSET", 5],                   // Set Mesh bounds as an inset region of the bed
+            ["Z_CLEARANCE_DEPLOY_PROBE", 5],     // Z Clearance for Deploy/Stow
 
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
             ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, 0]],
@@ -155,7 +154,7 @@ module.exports = {
             
             //Enable Linear Advance and set default K to 0
             "LIN_ADVANCE",
-            ["LIN_ADVANCE_K", 0],
+            ["ADVANCE_K", 0],
             "EXPERIMENTAL_SCURVE",
             "ALLOW_LOW_EJERK",
 
@@ -167,7 +166,10 @@ module.exports = {
             "ASSISTED_TRAMMING_WIZARD",
             "REPORT_TRAMMING_MM",
 
-            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`], // not sure!?
+            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`], // my Ender 3 Pro has 24V power supply, for some reason default was 12V?
+
+            "QUICK_HOME",
+
             
         ],
         disable: [
