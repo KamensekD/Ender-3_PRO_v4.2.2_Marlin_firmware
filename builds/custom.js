@@ -1,5 +1,5 @@
 module.exports = {
-    extends: "builds/default.js",
+    extends: "builds/base.js",
 //    board_env: "STM32F103RE_creality",
 //    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
@@ -27,7 +27,7 @@ module.exports = {
 
 
             ["STRING_CONFIG_H_AUTHOR", "(zisismaras, KamensekD)"],
-            ["CUSTOM_MACHINE_NAME",  "Ender-3 Pro v4.2.2"],
+            ["CUSTOM_MACHINE_NAME", "Ender-3 Pro v4.2.2"],
 
 
             //Defaults
