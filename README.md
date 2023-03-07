@@ -27,22 +27,34 @@ the default Marlin configuration for Ender-3 Pro with these minimal differences:
 
 ### `custom`
 ___
-my customized firmware modifications that suit me and might or might not be good for you, so use with caution!
+**my customized firmware modifications that suit me and might or might not be good for you, so use with caution!**
 
-- added misc options to menu - Bed tramming, PID Edit, Mesh Edit, Autotune, 
-- enables `HOST_ACTION_COMMANDS` for those, using octoprint.
-- [linear advance](https://marlinfw.org/docs/features/lin_advance.html).     
-Linear advance `K factor` is set to `0`. You can read the marlin docs on how to find and set a good value.  
-There are also numerous videos on youtube.  
-- [UBL automatic leveling on 5x5 mesh](https://marlinfw.org/docs/gcode/G029-ubl.html)  
+- adds options to menu: **Bed Tramming**, **Tramming Wizard**, **Bed Leveling**, **Probe Offset Wizzard**, **PID Edit**, **Mesh Edit**, **Autotune**, 
+- enables [G29 UBL Automatic Leveling on 5x5 mesh](https://marlinfw.org/docs/gcode/G029-ubl.html),  
 **Note**: Only tested with a 3D-touch (CR-touch and BL-touch should work as well).  
 The grid is configured to be symmetrical with 20mm margin on left and right and 10mm on front and back.  
 Probe offsets are set to my probe, which is `-27, 0, -1`. There are a lot of videos on how to measure and set/change them.  
 The build enables the offset wizard to simplify the Z-offset measurement.  
 **Important**: The build assumes you are using the dedicated BL-touch port on the board and you have the Z-stop disconnected.  
-The [M48 accuracy test](https://marlinfw.org/docs/gcode/M048.html) is also enabled in case you want to test your probe.
-- ...
+The [M48 Probe Accuracy Test](https://marlinfw.org/docs/gcode/M048.html) is also enabled in case you want to test your probe.  
+Bed and probe are preheated before probing to 50/180°C (PREHEAT_BEFORE_LEVELING)  
+Leveling Fade height was increased from 10 to 40mm
+- enables [Linear Advance](https://marlinfw.org/docs/features/lin_advance.html),  
+Linear advance `K factor` is set to `0`. You can read the marlin docs on how to find and set a good value.  
+There are also numerous videos on youtube.  
+- enables [G12 Clean Nozzle Feature](https://marlinfw.org/docs/gcode/G012.html)
+- enables [G35 Tramming Assistant](https://marlinfw.org/docs/gcode/G035.html)
+- changes default Preheat Constants from PLA/ABS to PLA(200/50) and PETG(225/50)
+- enables `HOST_ACTION_COMMANDS` for those, using [OctoPrint](https://octoprint.org/),
+- disables Continue after Power-Loss to increase SD card life,
+- enables Emergency Parser for [M108](https://marlinfw.org/docs/gcode/M108.html), [M112](https://marlinfw.org/docs/gcode/M112.html), [M410](https://marlinfw.org/docs/gcode/M140.html), [M876](https://marlinfw.org/docs/gcode/M876.html),  
+- adds/changes/enforces some other settings:  
+EXTRUDE_MAXLENGTH 500, DEFAULT_TRAVEL_ACCELERATION 500, DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 400, 100 },  
+S_CURVE_ACCELERATION, XY_PROBE_FEEDRATE (150*60), Z_PROBE_FEEDRATE_FAST (6*60), Z_CLEARANCE_DEPLOY_PROBE 5,  
+Z_CLEARANCE_BETWEEN_PROBES 4, X_MAX_POS 250 (to let the probe almost reach bed end), MESH_INSET 5, Z_SAFE_HOMING,  
+BABYSTEPPING, CHOPPER_DEFAULT_24V
 
+todo: (check M115)
 <br><br>
 
 # Build you own firmware
