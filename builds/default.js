@@ -12,7 +12,7 @@ module.exports = {
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
         stable_branch: "release-{{marlin_version}}",   // latest stable
-        nightly_branch: "bugfix-2.1.x"    // latest nightly
+        nightly_branch: "bugfix-2.1.x"                 // latest nightly
     },
 
 
@@ -25,8 +25,7 @@ module.exports = {
 
             //standard leveling menu helper
             "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER"
-
+            "BED_TRAMMING_INCLUDE_CENTER",
 
         ]
     },
@@ -38,7 +37,7 @@ module.exports = {
 
 
             //for OctoPrint
-            "HOST_ACTION_COMMANDS"
+            "HOST_ACTION_COMMANDS",
 
 
         ]
