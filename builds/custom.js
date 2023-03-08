@@ -195,7 +195,7 @@ module.exports = {
 //            ["MESH_MAX_Y", Y_BED_SIZE - (MESH_INSET)],
 
             ["BLTOUCH_HS_MODE", true],      // speedy mode - not retracting probe for each point
-            ["BLTOUCH_DELAY", 300],         // default 500, lower if stable
+            ["BLTOUCH_DELAY", 400],         // default 500, lower if stable
             
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
