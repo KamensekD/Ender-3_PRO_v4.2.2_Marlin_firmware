@@ -209,7 +209,7 @@ module.exports = {
             //Enable Linear Advance and set default K to 0.5
             "LIN_ADVANCE",
             ["ADVANCE_K", 0.5],
-            //"EXPERIMENTAL_SCURVE",    // removed in Marlin
+            EXPERIMENTAL_SCURVE",    // removed in bugfix 2.1.x, needed for stable 2.1.2 Marlin
             "ALLOW_LOW_EJERK",
 
 
