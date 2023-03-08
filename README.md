@@ -1,6 +1,7 @@
-## PARTLY TESTED - "Stable version doesn't seem to install, bugfixed Nightly version seems to work OK!" - use with caution and at own risk!
+This is my take of zisismaras's **marlin_auto_build** to build customized Marlin firmware for **Ender-3 Pro** with **4.2.2** board  
 
-This is my take of zisismaras's **marlin_auto_build** to build customized Marlin firmware for **Ender-3 Pro** with **4.2.2** board
+## PARTLY TESTED - Stable version doesn't seem to flash on my printer,  
+## bugfixed Nightly versions seem to work OK though - use with caution and at own risk!
 
 _____
 
