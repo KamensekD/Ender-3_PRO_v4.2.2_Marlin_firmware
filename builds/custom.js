@@ -38,7 +38,7 @@ module.exports = {
 
             
             // Homing speeds (linear=mm/min, rotational=°/min)
-            ["HOMING_FEEDRATE_MM_M", [ (150*60), (150*60), (10*60) ]],
+            ["HOMING_FEEDRATE_MM_M", [ (120*60), (90*60), (10*60) ]],
 
 
             ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
@@ -196,8 +196,8 @@ module.exports = {
 //            ["MESH_MAX_X", X_BED_SIZE - (MESH_INSET)],
 //            ["MESH_MAX_Y", Y_BED_SIZE - (MESH_INSET)],
 
-            ["BLTOUCH_HS_MODE", true],      // speedy mode - not retracting probe for each point
-            ["BLTOUCH_DELAY", 400],         // default 500, lower if stable, otherwise let it at 500
+            ["BLTOUCH_HS_MODE", false],     // speedy mode - not retracting probe for each point
+            ["BLTOUCH_DELAY", 500],         // lower if stable, otherwise let it at 500
             
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
