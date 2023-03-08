@@ -116,6 +116,7 @@ module.exports = {
 
             "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
             "RESTORE_LEVELING_AFTER_G28",   // normally G28 leaves leveling disabled; this options to restore sprior leveling state
+            "UBL_MESH_WIZARD",
 
             //#define G26_MESH_VALIDATION
             "G26_MESH_VALIDATION",
@@ -200,7 +201,6 @@ module.exports = {
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
             "PROBE_OFFSET_WIZARD",
-            "UBL_MESH_WIZARD",
 
             "ASSISTED_TRAMMING",
             "ASSISTED_TRAMMING_WIZARD",
@@ -209,7 +209,7 @@ module.exports = {
             //Enable Linear Advance and set default K to 0.5
             "LIN_ADVANCE",
             ["ADVANCE_K", 0.5],
-            "EXPERIMENTAL_SCURVE",
+            //"EXPERIMENTAL_SCURVE",    // removed in Marlin
             "ALLOW_LOW_EJERK",
 
 
