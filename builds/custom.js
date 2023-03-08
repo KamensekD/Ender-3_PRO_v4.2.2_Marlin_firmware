@@ -34,7 +34,7 @@ module.exports = {
             ["X_BED_SIZE", 235],
             ["Y_BED_SIZE", 235],
             ["X_MAX_POS", 250],  // max for my machine
-            ["Y_MAX_POS", 241],  // max for my machine
+            ["Y_MAX_POS", 240],  // max for my machine
 
             
             // Homing speeds (linear=mm/min, rotational=°/min)
@@ -46,20 +46,20 @@ module.exports = {
             ["DEFAULT_MAX_ACCELERATION", [500, 500, 100, 2500]],        // Default Max Feed Rate (mm/s)
             ["DEFAULT_ACCELERATION", 250],                       // X, Y, Z ... and E acceleration for printing moves
             ["DEFAULT_TRAVEL_ACCELERATION", 500],                // X, Y, Z ... acceleration for travel (non printing) moves
-            ["DEFAULT_RETRACT_ACCELERATION", 1000],              // E acceleration for retracts
+            ["DEFAULT_RETRACT_ACCELERATION", 500],               // E acceleration for retracts
 
 
             //Preheat Constants
             ["PREHEAT_1_LABEL", "PLA"],
             ["PREHEAT_1_TEMP_HOTEND", 200],
             ["PREHEAT_1_TEMP_BED", 50],
-            ["PREHEAT_1_FAN_SPEED", 0],
+            ["PREHEAT_1_FAN_SPEED", 128],
 
             
             ["PREHEAT_2_LABEL", "PETG"],
             ["PREHEAT_2_TEMP_HOTEND", 225],
             ["PREHEAT_2_TEMP_BED", 50],
-            ["PREHEAT_2_FAN_SPEED", 0],
+            ["PREHEAT_2_FAN_SPEED", 128],
 
             //["PREHEAT_3_LABEL", "pre-heat"],
             //["PREHEAT_3_TEMP_HOTEND", 180],
@@ -179,6 +179,7 @@ module.exports = {
             //for Octoprint
             "HOST_ACTION_COMMANDS",
 
+            "HOST_STATUS_NOTIFICATIONS",
 
             //for Auto Level
             ["PROBING_MARGIN_LEFT", 20],
@@ -196,7 +197,7 @@ module.exports = {
 //            ["MESH_MAX_Y", Y_BED_SIZE - (MESH_INSET)],
 
             ["BLTOUCH_HS_MODE", true],      // speedy mode - not retracting probe for each point
-            ["BLTOUCH_DELAY", 400],         // default 500, lower if stable
+            ["BLTOUCH_DELAY", 400],         // default 500, lower if stable, otherwise let it at 500
             
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
