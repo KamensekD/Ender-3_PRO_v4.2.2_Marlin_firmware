@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check timezone
-        run: echo $TZ
+        run:  echo "Current time zone: $(date +%Z)"
+              echo "Current date: $(date)"
