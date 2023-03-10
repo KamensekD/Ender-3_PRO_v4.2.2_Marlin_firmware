@@ -2,7 +2,9 @@ name: Test_Timezone
 on:
   push:
     branches:
-      - main
+      - master
+    paths:
+      - '**.yml'
 jobs:
   my_job:
     runs-on: ubuntu-latest
