@@ -1,4 +1,6 @@
 name: Test_Timezone
+env:
+  TZ: Europe/Paris
 on:
   push:
     branches:
