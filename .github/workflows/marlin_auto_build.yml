@@ -1,12 +1,13 @@
 name: marlin_auto_build
 
+
 on:
   push:
     paths:
       - 'builds/**'
   schedule:
-     - cron:  '05 12 * * 5'
-     # weekly - every friday ad 12:05 UTC
+    - cron:  '15 12 * * *'
+    # weekly - every day at 12:15 UTC
 jobs:
   create_builds:
     runs-on: ubuntu-latest 
