@@ -1,17 +1,4 @@
-name: Check_Timezone
-on:
-  push:
-    paths:
-      - '.github/workflows/**'
-    branches:
-      - main
-#  schedule:
-#    - cron:  '15 12 * * *'
-jobs:
-  my_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check timezone
-        run: echo $TZ
+change this file to trigger starting of   test_TimeZone.yml
+in                                        .github/workflows/
 
-
+test
