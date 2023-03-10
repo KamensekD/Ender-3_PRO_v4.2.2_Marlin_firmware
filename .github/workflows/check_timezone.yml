@@ -1,0 +1,6 @@
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check timezone
+        run: echo $TZ
