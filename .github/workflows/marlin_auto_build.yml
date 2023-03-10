@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - 'builds/**'
-#  schedule:
+  schedule:
 #     - cron:  '30 3 * * *'
-
+      - cron:  '30 12 * * fri'      # weekly - every friday ad 12:30
 jobs:
   create_builds:
     runs-on: ubuntu-latest 
