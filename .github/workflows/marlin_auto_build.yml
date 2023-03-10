@@ -6,7 +6,7 @@ on:
       - 'builds/**'
   schedule:
 #     - cron:  '30 3 * * *'
-     - cron:  '45 10 * * 5'
+     - cron:  '48 11 * * FRI'
      # weekly - every friday ad 11:33 UTC
 jobs:
   create_builds:
