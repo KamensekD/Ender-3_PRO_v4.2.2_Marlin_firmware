@@ -1,4 +1,4 @@
-This is my take of zisismaras's **marlin_auto_build** to build customized Marlin firmware for **Ender-3 Pro** with **4.2.2** board  
+This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** to build customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board  
 
 ## PARTLY TESTED - Stable version doesn't seem to flash on my printer,  
 ## bugfixed Nightly versions seem to work OK though - use with caution and at own risk!
@@ -7,7 +7,7 @@ _____
 
 # Ender-3 Pro v4.2.2 Marlin firmware
 
-Automatic [Marlin](https://github.com/MarlinFirmware/Marlin) builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
+Automatic weekly Marlin builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
 You can find firmware downloads on the repository [releases](https://github.com/KamensekD/Ender-3-PRO-v4.2.2_Marlin-firmware/releases).  
 
 **Important**
