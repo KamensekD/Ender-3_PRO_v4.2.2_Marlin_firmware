@@ -1,10 +1,12 @@
-name: My Workflow
+name: Check_Timezone
 on:
-  paths:
-      - '.github/workflows/**'
   push:
+    paths:
+      - '.github/workflows/**'
     branches:
       - main
+#  schedule:
+#    - cron:  '15 12 * * *'
 jobs:
   my_job:
     runs-on: ubuntu-latest
