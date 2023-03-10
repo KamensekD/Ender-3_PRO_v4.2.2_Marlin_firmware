@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - '.github/workwlows/test_TimeZone.yml'
+      - '.github/workwlows/check_TimeZone'
 jobs:
   my_job:
     runs-on: ubuntu-latest
