@@ -1,8 +1,8 @@
 name: Check_Timezone
 on:
   push:
-    paths:
-      - '.github/workflows/**'
+#    paths:
+#      - '.github/workflows/**'
     branches:
       - main
 #  schedule:
