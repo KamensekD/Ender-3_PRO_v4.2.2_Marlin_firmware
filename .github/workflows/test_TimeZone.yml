@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Check timezone
         run:
-              echo "Current time zone: $(date +%Z)"
-              echo "Current date: $(date)"
+              echo Current time zone: $(date +%Z)
+              echo Current date: $(date)
