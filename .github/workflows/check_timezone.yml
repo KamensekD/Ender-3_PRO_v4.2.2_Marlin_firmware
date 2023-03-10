@@ -1,5 +1,7 @@
 name: My Workflow
 on:
+  paths:
+      - '.github/workflows/**'
   push:
     branches:
       - main
