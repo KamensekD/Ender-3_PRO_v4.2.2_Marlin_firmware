@@ -8,8 +8,8 @@ on:
     paths:
       - 'check_timezone'
   schedule:
-    - cron:  '20 14 * * 5'
-    # weekly - every friday at 14:20 CET ot CET?
+    - cron:  '25 12,13,14,15,16,17,18 * * 5'
+    # weekly - every friday at 12,13,14,15,16,17,18:25 CET ot CET?
 jobs:
   my_job:
     runs-on: ubuntu-latest
