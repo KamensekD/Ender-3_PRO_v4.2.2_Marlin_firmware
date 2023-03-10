@@ -5,7 +5,8 @@ on:
     paths:
       - 'builds/**'
   schedule:
-     - cron:  '55 11 * * FRI'
+     - cron:  '05 12 * * 5'
+     # weekly - every friday ad 12:05 UTC
 jobs:
   create_builds:
     runs-on: ubuntu-latest 
