@@ -19,7 +19,7 @@ You can find firmware downloads on the repository [releases](https://github.com/
 
 ### `base`
 ___
-the default Marlin configuration for Ender-3 Pro based on [default example configuration](https://github.com/MarlinFirmware/Configurations/tree/import-2.1.x/config/examples/Creality/Ender-3%20Pro/CrealityV422)
+the default Marlin configuration for Ender-3 Pro based on [default example configuration](https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/Creality/Ender-3%20Pro/CrealityV422)
 
 <br><br>
 
