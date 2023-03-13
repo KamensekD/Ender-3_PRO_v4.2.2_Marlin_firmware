@@ -1,7 +1,6 @@
 This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** to build customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board  
 
-## PARTLY TESTED - Stable version doesn't seem to flash on my printer,  
-## bugfixed Nightly versions seem to work OK though - use with caution and at own risk!
+## PARTLY TESTED - Stable version doesn't seem to flash on my printer, **bugfixed Nightly** versions seem to work OK though - In any case use with caution and at own risk!
 
 _____
 
