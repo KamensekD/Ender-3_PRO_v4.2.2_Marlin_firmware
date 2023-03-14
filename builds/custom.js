@@ -3,7 +3,7 @@ module.exports = {
 //    board_env: "STM32F103RE_creality",
 //    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
-    only: "nightly",   // build only stable or nightly branch
+  //    only: "nightly",   // build only stable or nightly branch
 
 
     meta: {
