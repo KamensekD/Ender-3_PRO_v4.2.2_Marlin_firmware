@@ -1,6 +1,6 @@
 name: Test_Timezone
 env:
-  TZ: Europe/Paris
+  TZ: Europe/Paris            # timezone of environment
 on:
   push:
     branches:
@@ -8,9 +8,10 @@ on:
     paths:
       - 'check_timezone'
   schedule:
-    - cron:  '55 6 * * 1'
+    - cron:  '00 7 * * 1'     # weekly - every monday at 7:00 UTC = 8:00 CET
+
     #- cron:  '55 5 * * 5'
-    # weekly - every friday at 5:55 CET
+    # weekly - every friday at 5:55 UTC
 jobs:
   my_job:
     runs-on: ubuntu-latest
