@@ -8,7 +8,8 @@ on:
     paths:
       - 'check_timezone'
   schedule:
-    - cron:  '55 5 * * 5'
+    - cron:  '55 5 * * 1'
+    #- cron:  '55 5 * * 5'
     # weekly - every friday at 5:55 CET
 jobs:
   my_job:
