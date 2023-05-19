@@ -1,12 +1,12 @@
 {
     "builds/base.js": {
-        "version": "2.0.9.6",
+        "version": "2.1.2.1",
         "md5": "96dfc7e09b8fe090e1edf8e9fbb99a18",
-        "assetId": 105714664
+        "assetId": 108824494
     },
     "builds/custom.js": {
-        "version": "2.0.9.6",
+        "version": "2.1.2.1",
         "md5": "a9251c1066cf84b9f1989a558695bdaf",
-        "assetId": 105714666
+        "assetId": 108824496
     }
 }
