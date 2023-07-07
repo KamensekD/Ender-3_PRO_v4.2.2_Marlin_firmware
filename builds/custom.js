@@ -125,7 +125,7 @@ module.exports = {
             ["MESH_TEST_NOZZLE_SIZE",0.4],  // (mm) Diameter of primary nozzle.
             ["MESH_TEST_LAYER_HEIGHT",0.2], // (mm) Default layer height for G26.
             ["MESH_TEST_HOTEND_TEMP",225],  // (°C) Default nozzle temperature for G26.
-            ["MESH_TEST_BED_TEMP",60],      // (°C) Default bed temperature for G26.
+            ["MESH_TEST_BED_TEMP",50],      // (°C) Default bed temperature for G26.
             ["G26_XY_FEEDRATE",20],         // (mm/s) Feedrate for G26 XY moves.
             ["G26_XY_FEEDRATE_TRAVEL",100], // (mm/s) Feedrate for G26 XY travel moves.
             ["G26_RETRACT_MULTIPLIER",1.0], // G26 Q (retraction) used by default between mesh test elements.
@@ -135,16 +135,16 @@ module.exports = {
             "USE_PROBE_FOR_Z_HOMING",
 
             ["XY_PROBE_FEEDRATE", q`(150*60)`],
-            ["Z_PROBE_FEEDRATE_FAST", q`(10*60)`],
-            ["Z_PROBE_FEEDRATE_SLOW", q`(3*60)`],
+            ["Z_PROBE_FEEDRATE_FAST", q`(15*60)`],
+            ["Z_PROBE_FEEDRATE_SLOW", q`(4*60)`],
 
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 180],
             ["LEVELING_BED_TEMP", 50],
 
             ["Z_CLEARANCE_DEPLOY_PROBE", 6],     // Z Clearance for Deploy/Stow
-            ["Z_CLEARANCE_BETWEEN_PROBES", 3],
-            ["Z_CLEARANCE_MULTI_PROBE", 3],
+            ["Z_CLEARANCE_BETWEEN_PROBES", 4],
+            ["Z_CLEARANCE_MULTI_PROBE", 4],
                  
 
             ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
@@ -222,7 +222,7 @@ module.exports = {
 
 
             // If G28 contains XY do a diagonal move first
-            "QUICK_HOME",
+            // "QUICK_HOME",
 
 
             //Thermal protection settings            
