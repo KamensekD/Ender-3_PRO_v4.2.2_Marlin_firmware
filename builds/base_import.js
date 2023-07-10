@@ -2,7 +2,7 @@ module.exports = {
 
     board_env: "STM32F103RE_creality",
     //active: false,    // disable this build
-    //only: "stable",   // build only stable or nightly branch
+    only: "stable",   // build only stable or nightly branch
       //only: "nightly",   // build only stable or nightly branch
     meta: {
         stable_name: "ender3pro_v4.2.2_R2121M_{{marlin_version}}-base-{{current_date}}",
@@ -12,9 +12,9 @@ module.exports = {
     based_on: {   // default Ender-3 Pro Marlin example config
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
-        stable_branch: "release-{{marlin_version}}",   // latest stable
-   //     stable_branch: "release-2.1.2.1",              // latest stable release
-        nightly_branch: "import-2.1.x"                 // latest import
+   //     stable_branch: "release-{{marlin_version}}",   // latest stable
+        stable_branch: "release-2.1.2.1",              // latest stable release
+   //     nightly_branch: "import-2.1.x"                 // latest import
     },
 
 
