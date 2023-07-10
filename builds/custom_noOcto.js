@@ -7,8 +7,8 @@ module.exports = {
 
 
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
+        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom_noOcto-{{current_date}}",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom_noOcto-{{uid}}"
     },
 
 //    based_on: {   // default Ender-3 Pro Marlin example config
