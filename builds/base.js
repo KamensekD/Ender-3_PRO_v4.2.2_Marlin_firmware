@@ -25,7 +25,8 @@ module.exports = {
     based_on: {   // default Ender-3 Pro Marlin example config
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
-        stable_branch: "import-2.1.x",              // latest stable
+//        stable_branch: "import-2.1.x",              // latest stable
+        stable_branch: "release-2.0.9.7,              // latest stable
         nightly_branch: "bugfix-2.1.x"                 // latest nightly
     },
     
