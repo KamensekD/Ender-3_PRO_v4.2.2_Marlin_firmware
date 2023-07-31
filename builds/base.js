@@ -45,11 +45,11 @@ module.exports = {
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
 
-//        stable_branch: "release-{{marlin_version}}",   // latest stable
-        stable_branch: "release-2.1.2",                // latest stable
+        stable_branch: "release-{{marlin_version}}",   // latest stable
         nightly_branch: "bugfix-2.1.x"                 // latest nightly
     },
-//        stable_branch: "release-2.0.9.7",              // latest stable
+//        stable_branch: "release-2.0.9.7",              // doesn't seem to work
+//        stable_branch: "release-2.1.2.1",              // doesn't seem to work
 
 
     configuration:     {   // "Configuration.h" customizations
