@@ -7,8 +7,10 @@ module.exports = {
 
 
     meta: {
+//        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
+//        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
+        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix-custom-{{current_date}}"
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
     },
 
 //    based_on: {   // default Ender-3 Pro Marlin example config
@@ -184,10 +186,10 @@ module.exports = {
             "HOST_STATUS_NOTIFICATIONS",
 
             //for Auto Level
-            ["PROBING_MARGIN_LEFT", 20],
-            ["PROBING_MARGIN_RIGHT", 20],
-            ["PROBING_MARGIN_FRONT", 20],
-            ["PROBING_MARGIN_BACK", 20],
+            ["PROBING_MARGIN_LEFT", 25],
+            ["PROBING_MARGIN_RIGHT", 25],
+            ["PROBING_MARGIN_FRONT", 25],
+            ["PROBING_MARGIN_BACK", 25],
             
             ["MESH_MIN_X", 25],
             ["MESH_MIN_Y", 25],
