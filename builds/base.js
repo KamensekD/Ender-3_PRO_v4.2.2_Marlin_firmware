@@ -12,6 +12,7 @@ module.exports = {
 //        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
 //        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
     
+
 // Creating builds based on other's configurations:
 // Most of the time, you will base your builds on Marlin's example configurations but you might want to use an existing modified build that someone else made and just add some more changes on top.
 // For example:
@@ -45,7 +46,7 @@ module.exports = {
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
 
 //        stable_branch: "release-{{marlin_version}}",   // latest stable
-        stable_branch: "release-2.1.2.1",              // latest stable
+        stable_branch: "release-2.1.2",                // latest stable
         nightly_branch: "bugfix-2.1.x"                 // latest nightly
     },
 //        stable_branch: "release-2.0.9.7",              // latest stable
