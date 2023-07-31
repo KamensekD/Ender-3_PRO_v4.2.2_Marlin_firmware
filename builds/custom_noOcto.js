@@ -12,7 +12,6 @@ module.exports = {
     },
 //        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-customNO-{{current_date}}",
 //        nightly_name: "ender3pro_v4.2.2_{{current_date}}-customNO-{{uid}}"
-    },
 
                            // for valid syntax refer to:          https://github.com/zisismaras/marlin_auto_build
     
