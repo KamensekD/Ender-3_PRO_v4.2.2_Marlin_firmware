@@ -42,7 +42,7 @@ There are also numerous videos on youtube.
 - enables [G12 Clean Nozzle Feature](https://marlinfw.org/docs/gcode/G012.html)
 - enables [G35 Tramming Assistant](https://marlinfw.org/docs/gcode/G035.html)
 - changes default Preheat Constants from PLA/ABS to PLA(200/50) and PETG(225/50)
-- enables `HOST_ACTION_COMMANDS` for those, using [OctoPrint](https://octoprint.org/),
+- enables `HOST_ACTION_COMMANDS` for those, using [OctoPrint](https://octoprint.org/), (* customNoOcto version doesn't)
 - disables Continue after Power-Loss to increase SD card life,
 - enables Emergency Parser for [M108](https://marlinfw.org/docs/gcode/M108.html), [M112](https://marlinfw.org/docs/gcode/M112.html), [M410](https://marlinfw.org/docs/gcode/M140.html), [M876](https://marlinfw.org/docs/gcode/M876.html),  
 - changes some Thermal protection settings,  
