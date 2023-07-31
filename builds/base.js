@@ -5,8 +5,8 @@ module.exports = {
     only: "stable",   // build only stable or nightly branch
     //only: "nightly",   // build only stable or nightly branch
     meta: {
-//        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
-        stable_name: "ender3pro_v4.2.2_M2.0.9.7-base-{{current_date}}",
+        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
+//        stable_name: "ender3pro_v4.2.2_M2.0.9.7-base-{{current_date}}",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
     },
 
@@ -22,22 +22,13 @@ module.exports = {
 // The {{releaseType}} variable will be either stable or nightly depending on what's currently building.
 // Instead of using latest you can point to the currently building marlin version by using {{marlin_version}}
 // or hard-code a specific version that you want. Using latest is recommended.
-
-//    based_on: {   // default Ender-3 Pro Marlin example config
-//        repo: "https://github.com/MarlinFirmware/Configurations/",
-//        path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
-//        stable_branch: "import-2.1.x",              // latest stable
-//        stable_branch: "release-2.0.9.7",              // latest stable
-//        stable_branch: "release-{{marlin_version}}",   // latest stable
-//        nightly_branch: "bugfix-2.1.x"                 // latest nightly
-//    },
     
 
     based_on: {   // default Ender-3 Pro Marlin example config
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
-//        stable_branch: "release-{{marlin_version}}",   // latest stable
-        stable_branch: "release-2.0.9.7",              // latest stable
+        stable_branch: "release-{{marlin_version}}",   // latest stable
+//        stable_branch: "release-2.0.9.7",              // latest stable
         nightly_branch: "bugfix-2.1.x"                 // latest nightly
     },
 
