@@ -7,7 +7,8 @@ module.exports = {
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
 //        stable_name: "ender3pro_v4.2.2_M2.0.9.7-base-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
+//        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
+        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
     },
 
 // Creating builds based on other's configurations:
