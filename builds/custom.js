@@ -1,9 +1,8 @@
 module.exports = {
     extends: "builds/base.js",
-//    board_env: "STM32F103RE_creality",
 //    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
-  //    only: "nightly",   // build only stable or nightly branch
+//    only: "nightly",   // build only stable or nightly branch
 
 
     meta: {
@@ -26,7 +25,7 @@ module.exports = {
 //    },
 
 
-                           // for valid syntax refer to:          https://github.com/zisismaras/marlin_auto_build
+// for valid syntax refer to: https://github.com/zisismaras/marlin_auto_build
     configuration:     {   // "Configuration.h" customizations
         enable: [
 
