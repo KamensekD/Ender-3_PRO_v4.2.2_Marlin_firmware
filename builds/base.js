@@ -1,18 +1,26 @@
 module.exports = {
-
-    board_env: "STM32F103RE_creality",
     //active: false,    // disable this build
     //only: "stable",   // build only stable or nightly branch
     //only: "nightly",   // build only stable or nightly branch
+    board_env: "STM32F103RE_creality",
+    min_version: "2.1.2",
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
-//        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-base-{{current_date}}"
+        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-base-{{current_date}}"
     },
 //        stable_name: "ender3pro_v4.2.2_M2.0.9.7-base-{{current_date}}",
 //        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
 //        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
-    
+
+        based_on: {   // default Ender-3 Pro Marlin example config
+        repo: "https://github.com/MarlinFirmware/Configurations/",
+        path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
+        stable_branch: "release-{{marlin_version}}",
+        nightly_branch: "bugfix-2.1.x"
+    },
+//        stable_branch: "release-2.0.9.7",              // doesn't seem to work
+//        stable_branch: "release-2.1.2.1",              // doesn't seem to work
+
 
 // Creating builds based on other's configurations:
 // Most of the time, you will base your builds on Marlin's example configurations but you might want to use an existing modified build that someone else made and just add some more changes on top.
@@ -38,18 +46,6 @@ module.exports = {
 //        nightly_branch: "master"
 //    },
 
-
-
-    
-
-    based_on: {   // default Ender-3 Pro Marlin example config
-        repo: "https://github.com/MarlinFirmware/Configurations/",
-        path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
-        stable_branch: "release-{{marlin_version}}",   // latest stable
-        nightly_branch: "bugfix-2.1.x"                 // latest nightly
-    },
-//        stable_branch: "release-2.0.9.7",              // doesn't seem to work
-//        stable_branch: "release-2.1.2.1",              // doesn't seem to work
 
 
     configuration:     {   // "Configuration.h" customizations
