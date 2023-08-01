@@ -1,16 +1,13 @@
 module.exports = {
     extends: "builds/base.js",
-//    active: false,    // disable this build
+    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
 //    only: "nightly",   // build only stable or nightly branch
 
-
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix-custom-{{current_date}}"
+        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-custom-{{current_date}}"
     },
-//        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-//        nightly_name: "ender3pro_v4.2.2_{{current_date}}-custom-{{uid}}"
    
 
 // for valid syntax refer to: https://github.com/zisismaras/marlin_auto_build
