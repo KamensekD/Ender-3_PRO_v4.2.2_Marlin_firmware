@@ -8,11 +8,11 @@ module.exports = {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
 //        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-base-{{current_date}}"
 //        stable_name: "ender3pro_v4.2.2_M2.0.9.7-base-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
-//        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
+        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
+//        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
     },
 
-    based_on: {   // default Ender-3 Pro Marlin example config
+    based_on: {     // default Ender-3 Pro Marlin example config
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
         stable_branch: "release-{{marlin_version}}",
