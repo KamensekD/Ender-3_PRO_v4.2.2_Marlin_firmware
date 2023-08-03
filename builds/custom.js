@@ -3,10 +3,10 @@ module.exports = {
 //    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
 //    only: "nightly",   // build only stable or nightly branch
-
     meta: {
         stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-custom-{{current_date}}"
+        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-custom-{{current_date}}"
+//        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-custom-{{current_date}}"
     },
    
 
