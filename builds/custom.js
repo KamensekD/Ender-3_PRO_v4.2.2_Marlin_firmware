@@ -1,6 +1,6 @@
 module.exports = {
     extends: "builds/base.js",
-    active: false,    // disable this build
+//    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
 //    only: "nightly",   // build only stable or nightly branch
 
@@ -15,7 +15,7 @@ module.exports = {
         enable: [
 
 
-            ["STRING_CONFIG_H_AUTHOR", "(zisismaras, KamensekD)"],
+            ["STRING_CONFIG_H_AUTHOR", "(KamensekD)"],
             ["CUSTOM_MACHINE_NAME", "Ender-3 Pro v4.2.2"],
 
 
@@ -104,7 +104,7 @@ module.exports = {
             ["Z_MIN_PROBE_PIN", q`PB1`],
 
             "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
-            "RESTORE_LEVELING_AFTER_G28",   // normally G28 leaves leveling disabled; this options to restore sprior leveling state
+            "RESTORE_LEVELING_AFTER_G28",   // normally G28 leaves leveling disabled; this options to restore prior leveling state
             "UBL_MESH_WIZARD",
 
             //#define G26_MESH_VALIDATION
