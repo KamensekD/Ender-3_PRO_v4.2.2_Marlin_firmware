@@ -3,7 +3,7 @@ module.exports = {
     //only: "stable",   // build only stable or nightly branch
     //only: "nightly",   // build only stable or nightly branch
 
-    extends: "builds/default.js",    
+    extends: "builds/default.js",
 
     meta: {
         stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-base",
@@ -14,10 +14,8 @@ module.exports = {
         enable: [
 
             
+            ["CUSTOM_MACHINE_NAME", "Ender-3 Pro v4.2.2"],
             ["STRING_CONFIG_H_AUTHOR", "(KamensekD)"],
-            //standard leveling menu helper
-            "LCD_BED_TRAMMING",
-            "BED_TRAMMING_INCLUDE_CENTER"
 
             
             //Defaults
@@ -50,6 +48,28 @@ module.exports = {
             ["PREHEAT_2_TEMP_HOTEND", 225],
             ["PREHEAT_2_TEMP_BED", 50],
             ["PREHEAT_2_FAN_SPEED", 128],
+
+            
+            //["PREHEAT_3_LABEL", "pre-heat"],
+            //["PREHEAT_3_TEMP_HOTEND", 180],
+            //["PREHEAT_3_TEMP_BED", 40],
+
+
+            //prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
+            "PREVENT_LENGTHY_EXTRUDE",
+            ["EXTRUDE_MAXLENGTH", 500],
+
+
+            //LCD Menu options
+            "PID_EDIT_MENU",         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
+            "PID_AUTOTUNE_MENU",     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+            "LCD_BED_LEVELING",
+            "LCD_BED_TRAMMING",
+            "MESH_EDIT_MENU",
+
+
+            //Enable speaker
+            "SPEAKER",
       
         
         ]
