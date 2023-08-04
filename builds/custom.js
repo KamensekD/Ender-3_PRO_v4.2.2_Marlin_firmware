@@ -1,6 +1,6 @@
 module.exports = {
     extends: "builds/base.js",
-//    active: false,    // disable this build
+    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
 //    only: "nightly",   // build only stable or nightly branch
     meta: {
