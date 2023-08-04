@@ -87,8 +87,9 @@ module.exports = {
             //["Y_DRIVER_TYPE",  q`A4988`],
             //["Z_DRIVER_TYPE",  q`A4988`],
             //["E0_DRIVER_TYPE", q`A4988`],
+            "NO_CREALITY_422_DRIVER_WARNING",
 
-
+            
             //eliminates vibration during printing by fitting a Bézier curve to move acceleration
             "S_CURVE_ACCELERATION",
 
