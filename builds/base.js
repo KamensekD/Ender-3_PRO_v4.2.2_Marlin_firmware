@@ -6,10 +6,9 @@ module.exports = {
     min_version: "2.1.2",
     
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-base-{{current_date}}",
-//        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-base-{{current_date}}"
-//        stable_name: "ender3pro_v4.2.2_M2.0.9.7-base-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
+        stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-base",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-base"
+//        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base-{{current_date}}"
 //        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base-{{uid}}"
     },
 
