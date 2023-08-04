@@ -6,10 +6,8 @@ module.exports = {
     min_version: "2.1.2",
     
     meta: {
-        stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-base1",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-base1"
-//        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-base1-{{current_date}}"
-//        nightly_name: "ender3pro_v4.2.2_{{current_date}}-base1-{{uid}}"
+        stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-default",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-default"
     },
 
     based_on: {     // default Ender-3 Pro Marlin example config
