@@ -70,7 +70,76 @@ module.exports = {
 
             //Enable speaker
             "SPEAKER",
-      
+
+
+
+
+
+                        //eliminates vibration during printing by fitting a Bézier curve to move acceleration
+            "S_CURVE_ACCELERATION",
+
+
+            //Adds the G12 command to perform a nozzle cleaning process
+            "NOZZLE_CLEAN_FEATURE",
+
+
+            //Auto Level settings
+            ["GRID_MAX_POINTS_X", 5],            // number of points in x direction
+            ["MESH_INSET", 1],                   // Set Mesh bounds as an inset region of the bed
+
+            
+            "BLTOUCH",
+            ["Z_MIN_PROBE_PIN", q`PB1`],
+
+            
+            "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
+            "RESTORE_LEVELING_AFTER_G28",   // normally G28 leaves leveling disabled; this options to restore prior leveling state
+            "UBL_MESH_WIZARD",
+
+
+            //#define G26_MESH_VALIDATION
+            "G26_MESH_VALIDATION",
+            ["MESH_TEST_NOZZLE_SIZE",0.4],  // (mm) Diameter of primary nozzle.
+            ["MESH_TEST_LAYER_HEIGHT",0.2], // (mm) Default layer height for G26.
+            ["MESH_TEST_HOTEND_TEMP",225],  // (°C) Default nozzle temperature for G26.
+            ["MESH_TEST_BED_TEMP",50],      // (°C) Default bed temperature for G26.
+            ["G26_XY_FEEDRATE",20],         // (mm/s) Feedrate for G26 XY moves.
+            ["G26_XY_FEEDRATE_TRAVEL",100], // (mm/s) Feedrate for G26 XY travel moves.
+            ["G26_RETRACT_MULTIPLIER",1.0], // G26 Q (retraction) used by default between mesh test elements.
+
+            
+            "Z_SAFE_HOMING",
+            "USE_PROBE_FOR_Z_HOMING",
+
+            ["XY_PROBE_FEEDRATE", q`(150*60)`],
+            ["Z_PROBE_FEEDRATE_FAST", q`(15*60)`],
+            ["Z_PROBE_FEEDRATE_SLOW", q`(4*60)`],
+
+            
+            "PREHEAT_BEFORE_LEVELING",
+            ["LEVELING_NOZZLE_TEMP", 180],
+            ["LEVELING_BED_TEMP", 50],
+
+            
+            ["Z_CLEARANCE_DEPLOY_PROBE", 6],     // Z Clearance for Deploy/Stow
+            ["Z_CLEARANCE_BETWEEN_PROBES", 4],
+            ["Z_CLEARANCE_MULTI_PROBE", 4],
+                 
+
+            ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
+            ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1.5]],
+            // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
+
+
+            //Bed Tramming also center point
+            "BED_TRAMMING_INCLUDE_CENTER",
+
+
+            //M48 test
+            "Z_MIN_PROBE_REPEATABILITY_TEST",
+
+            
+            "USB_FLASH_DRIVE_SUPPORT",    //
         
         ]
     },
