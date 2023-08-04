@@ -1,12 +1,12 @@
 module.exports = {
     extends: "builds/base.js",
-    active: false,    // disable this build
+//    active: false,    // disable this build
 //    only: "stable",   // build only stable or nightly branch
 //    only: "nightly",   // build only stable or nightly branch
+
     meta: {
-        stable_name: "ender3pro_v4.2.2_M{{marlin_version}}-custom-{{current_date}}",
-        nightly_name: "ender3pro_v4.2.2_{{marlin_version}}-custom-{{current_date}}"
-//        nightly_name: "ender3pro_v4.2.2_M2.1.x-bugfix{{marlin_version}}-custom-{{current_date}}"
+        stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-custom",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-custom"
     },
    
 
@@ -31,11 +31,11 @@ module.exports = {
 
 
             ["DEFAULT_AXIS_STEPS_PER_UNIT", [80, 80, 400, 100]],
-            ["DEFAULT_MAX_FEEDRATE", [500, 500, 25, 50]],        // Default Max Feed Rate (mm/s)
-            ["DEFAULT_MAX_ACCELERATION", [500, 500, 100, 2500]],        // Default Max Feed Rate (mm/s)
-            ["DEFAULT_ACCELERATION", 250],                       // X, Y, Z ... and E acceleration for printing moves
-            ["DEFAULT_TRAVEL_ACCELERATION", 500],                // X, Y, Z ... acceleration for travel (non printing) moves
-            ["DEFAULT_RETRACT_ACCELERATION", 500],               // E acceleration for retracts
+            ["DEFAULT_MAX_FEEDRATE", [500, 500, 25, 50]],            // Default Max Feed Rate (mm/s)
+            ["DEFAULT_MAX_ACCELERATION", [500, 500, 100, 2500]],     // Default Max Feed Rate (mm/s)
+            ["DEFAULT_ACCELERATION", 250],                           // X, Y, Z ... and E acceleration for printing moves
+            ["DEFAULT_TRAVEL_ACCELERATION", 500],                    // X, Y, Z ... acceleration for travel (non printing) moves
+            ["DEFAULT_RETRACT_ACCELERATION", 500],                   // E acceleration for retracts
 
 
             //Preheat Constants
@@ -50,6 +50,7 @@ module.exports = {
             ["PREHEAT_2_TEMP_BED", 50],
             ["PREHEAT_2_FAN_SPEED", 128],
 
+            
             //["PREHEAT_3_LABEL", "pre-heat"],
             //["PREHEAT_3_TEMP_HOTEND", 180],
             //["PREHEAT_3_TEMP_BED", 40],
@@ -100,12 +101,15 @@ module.exports = {
             ["GRID_MAX_POINTS_X", 5],            // number of points in x direction
             ["MESH_INSET", 1],                   // Set Mesh bounds as an inset region of the bed
 
+            
             "BLTOUCH",
             ["Z_MIN_PROBE_PIN", q`PB1`],
 
+            
             "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
             "RESTORE_LEVELING_AFTER_G28",   // normally G28 leaves leveling disabled; this options to restore prior leveling state
             "UBL_MESH_WIZARD",
+
 
             //#define G26_MESH_VALIDATION
             "G26_MESH_VALIDATION",
@@ -125,10 +129,12 @@ module.exports = {
             ["Z_PROBE_FEEDRATE_FAST", q`(15*60)`],
             ["Z_PROBE_FEEDRATE_SLOW", q`(4*60)`],
 
+            
             "PREHEAT_BEFORE_LEVELING",
             ["LEVELING_NOZZLE_TEMP", 180],
             ["LEVELING_BED_TEMP", 50],
 
+            
             ["Z_CLEARANCE_DEPLOY_PROBE", 6],     // Z Clearance for Deploy/Stow
             ["Z_CLEARANCE_BETWEEN_PROBES", 4],
             ["Z_CLEARANCE_MULTI_PROBE", 4],
@@ -168,13 +174,16 @@ module.exports = {
             //for Octoprint
             "HOST_ACTION_COMMANDS",
 
+            
             "HOST_STATUS_NOTIFICATIONS",
 
+            
             //for Auto Level
             ["PROBING_MARGIN_LEFT", 20],
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 20],
             ["PROBING_MARGIN_BACK", 20],
+
             
             ["MESH_MIN_X", 25],
             ["MESH_MIN_Y", 25],
@@ -185,16 +194,20 @@ module.exports = {
 //            ["MESH_MAX_X", X_BED_SIZE - (MESH_INSET)],
 //            ["MESH_MAX_Y", Y_BED_SIZE - (MESH_INSET)],
 
+
             ["BLTOUCH_HS_MODE", false],     // speedy mode - not retracting probe for each point
             ["BLTOUCH_DELAY", 500],         // lower if stable, otherwise let it at 500
             
+
             "BABYSTEPPING",
             "BABYSTEP_ZPROBE_OFFSET",
             "PROBE_OFFSET_WIZARD",
 
+
             "ASSISTED_TRAMMING",
             "ASSISTED_TRAMMING_WIZARD",
             "REPORT_TRAMMING_MM",
+
 
             //Enable Linear Advance and set default K to 0.5
             "LIN_ADVANCE",
