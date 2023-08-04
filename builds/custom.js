@@ -83,10 +83,10 @@ module.exports = {
             //*          TMC2208, TMC2208_STANDALONE, TMC2209, TMC2209_STANDALONE,
             //*          TMC26X,  TMC26X_STANDALONE,  TMC2660, TMC2660_STANDALONE,
             //*          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
-            ["X_DRIVER_TYPE",  q`A4988`],
-            ["Y_DRIVER_TYPE",  q`A4988`],
-            ["Z_DRIVER_TYPE",  q`A4988`],
-            ["E0_DRIVER_TYPE", q`A4988`],
+            //["X_DRIVER_TYPE",  q`A4988`],
+            //["Y_DRIVER_TYPE",  q`A4988`],
+            //["Z_DRIVER_TYPE",  q`A4988`],
+            //["E0_DRIVER_TYPE", q`A4988`],
 
 
             //eliminates vibration during printing by fitting a Bézier curve to move acceleration
