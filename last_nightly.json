@@ -4,9 +4,14 @@
         "md5": "b3a4f36e219aee002e38a628bcecba1e",
         "assetId": 120037431
     },
+    "builds/base1.js": {
+        "version": "87231b625f3cf36b57352d3d89cfb05cfde0e777",
+        "md5": "2e6702e24855dcd0f2bc4f23efe87a47",
+        "assetId": 120053993
+    },
     "builds/custom.js": {
         "version": "87231b625f3cf36b57352d3d89cfb05cfde0e777",
-        "md5": "6a99e57522110ab98586530017dd6838",
+        "md5": "fb581ad0142275c66f0a92c3fd5aa4eb",
         "assetId": 119420993
     },
     "builds/custom_noOcto.js": {
