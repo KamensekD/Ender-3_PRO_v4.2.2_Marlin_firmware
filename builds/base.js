@@ -13,6 +13,7 @@ module.exports = {
     configuration: {
         enable: [
 
+
             
             ["CUSTOM_MACHINE_NAME", "Ender-3 Pro v4.2.2"],
             ["STRING_CONFIG_H_AUTHOR", "(KamensekD)"],
@@ -75,7 +76,7 @@ module.exports = {
 
 
 
-                        //eliminates vibration during printing by fitting a Bézier curve to move acceleration
+            //eliminates vibration during printing by fitting a Bézier curve to move acceleration
             "S_CURVE_ACCELERATION",
 
 
@@ -140,15 +141,95 @@ module.exports = {
 
             
             "USB_FLASH_DRIVE_SUPPORT",    //
-        
+
+            
+            
+        ],
+        disable: [
+
+
+
+            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
+            "MULTIPLE_PROBING",
+            "EXTRA_PROBING",
+
+
+            
         ]
     },
-    configuration_adv: {
 
-        
+    
+    
+    
+    
+    configuration_adv: {
         enable: [
-            //octoprint
-            "HOST_ACTION_COMMANDS"
+        
+            //for Octoprint
+            "HOST_ACTION_COMMANDS",
+
+            
+            "HOST_STATUS_NOTIFICATIONS",
+
+            
+            //for Auto Level
+            ["PROBING_MARGIN_LEFT", 20],
+            ["PROBING_MARGIN_RIGHT", 20],
+            ["PROBING_MARGIN_FRONT", 20],
+            ["PROBING_MARGIN_BACK", 20],
+
+            
+            ["MESH_MIN_X", 25],
+            ["MESH_MIN_Y", 25],
+            ["MESH_MAX_X", 210],
+            ["MESH_MAX_Y", 210],
+//            ["MESH_MIN_X", MESH_INSET],
+//            ["MESH_MIN_Y", MESH_INSET],
+//            ["MESH_MAX_X", X_BED_SIZE - (MESH_INSET)],
+//            ["MESH_MAX_Y", Y_BED_SIZE - (MESH_INSET)],
+
+
+            ["BLTOUCH_HS_MODE", false],     // speedy mode - not retracting probe for each point
+            ["BLTOUCH_DELAY", 500],         // lower if stable, otherwise let it at 500
+            
+
+            "BABYSTEPPING",
+            "BABYSTEP_ZPROBE_OFFSET",
+            "PROBE_OFFSET_WIZARD",
+
+
+            "ASSISTED_TRAMMING",
+            "ASSISTED_TRAMMING_WIZARD",
+            "REPORT_TRAMMING_MM",
+
+
+            //Enable Linear Advance and set default K to 0.5
+            "LIN_ADVANCE",
+            ["ADVANCE_K", 0.5],
+            "ALLOW_LOW_EJERK",
+            "EXPERIMENTAL_SCURVE",    // removed in bugfix 2.1.x, needed for stable 2.1.2 Marlin
+             //"LIN_ADVANCE and S_CURVE_ACCELERATION may not play well together! Enable EXPERIMENTAL_SCURVE to continue."
+
+
+            //handles M108, M112, M410, M876 imidiately
+            "EMERGENCY_PARSER",
+
+
+            // If G28 contains XY do a diagonal move first
+            // "QUICK_HOME",
+
+
+            //Thermal protection settings            
+            ["THERMAL_PROTECTION_BED_PERIOD",30],
+            ["THERMAL_PROTECTION_BED_HYSTERESIS",3],
+            ["WATCH_TEMP_PERIOD",30],
+            ["WATCH_TEMP_INCREASE",3],
+            ["WATCH_BED_TEMP_PERIOD",60],
+            ["WATCH_BED_TEMP_INCREASE",3],
+
+
+            // my Ender 3 Pro has 24V power supply, for some reason default for E3P was 12V?
+            ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`],
 
         
         ]
