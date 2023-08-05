@@ -6,7 +6,18 @@ on:
     paths:
       - 'builds/**'
   schedule:
-    - cron:  '15 1 * * 5'
+    # ┌───────────── minute (0 - 59)
+    # │ ┌───────────── hour (0 - 23)
+    # │ │ ┌───────────── day of the month (1 - 31)
+    # │ │ │ ┌───────────── month (1 - 12)
+    # │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+    # │ │ │ │ │                                   7 is also Sunday on some systems)
+    # │ │ │ │ │
+    # │ │ │ │ │
+    # * * * * * <command to execute>
+    - cron:  '15 1 * * *'
+    # daily - every day at 13:15 UTC
+    #- cron:  '15 1 * * 5'
     # weekly - every friday at 13:15 UTC
 jobs:
   create_builds:
