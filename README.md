@@ -1,12 +1,13 @@
 This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** to build customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board  
 
-## PARTLY TESTED - Stable version doesn't seem to flash on my printer, **bugfixed Nightly** versions seem to work OK though - In any case use with caution and at own risk!
-
-_____
+```diff
+! PARTLY TESTED - Stable version doesn't seem to flash on my printer, **bugfixed Nightly** versions seem to work OK though
+! In any case use with caution and at own risk !
+```
 
 # Ender-3 Pro v4.2.2 Marlin firmware
 
-Automatic weekly Marlin builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
+Automated Marlin builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
 You can find firmware downloads on the repository [releases](https://github.com/KamensekD/Ender-3-PRO-v4.2.2_Marlin-firmware/releases).  
 
 **Important**
@@ -16,15 +17,20 @@ You can find firmware downloads on the repository [releases](https://github.com/
 <br>
 
 ## Builds
+Check [Configuring Marlin](https://marlinfw.org/docs/configuration/configuration.html) for details of every setting.
 
-### `base`
+<br>
+
+### `_default`
 ___
-the default Marlin configuration for Ender-3 Pro based on [default example configuration](https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/Creality/Ender-3%20Pro/CrealityV422)
 
-<br><br>
+**the default Marlin configuration for Ender-3 Pro based on [default example configuration](https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/Creality/Ender-3%20Pro/CrealityV422)**
+
+<br>
 
 ### `custom`
 ___
+
 **my customized firmware modifications that suit me and might or might not be good for you, so use with caution!**
 
 - adds options to menu: **Bed Tramming**, **Tramming Wizard**, **Bed Leveling**, **Probe Offset Wizzard**, **PID Edit**, **Mesh Edit**, **Autotune**, 
@@ -42,7 +48,6 @@ There are also numerous videos on youtube.
 - enables [G12 Clean Nozzle Feature](https://marlinfw.org/docs/gcode/G012.html)
 - enables [G35 Tramming Assistant](https://marlinfw.org/docs/gcode/G035.html)
 - changes default Preheat Constants from PLA/ABS to PLA(200/50) and PETG(225/50)
-- enables `HOST_ACTION_COMMANDS` for those, using [OctoPrint](https://octoprint.org/), (* customNoOcto version doesn't)
 - disables Continue after Power-Loss to increase SD card life,
 - enables Emergency Parser for [M108](https://marlinfw.org/docs/gcode/M108.html), [M112](https://marlinfw.org/docs/gcode/M112.html), [M410](https://marlinfw.org/docs/gcode/M140.html), [M876](https://marlinfw.org/docs/gcode/M876.html),  
 - changes some Thermal protection settings,  
@@ -53,9 +58,20 @@ Z_CLEARANCE_DEPLOY_PROBE 5, Z_CLEARANCE_BETWEEN_PROBES 4,
 X_MAX_POS 250 (to let the probe almost reach bed end), MESH_INSET 5, Z_SAFE_HOMING,  
 BABYSTEPPING, EXTRUDE_MAXLENGTH 500, CHOPPER_DEFAULT_24V,...  
 
-todo: (check [M115](https://marlinfw.org/docs/gcode/M115.html))
+<br>
+
+### `custom-octo`
+___
+**same as custom with some additional configurations changes:**
+
+- enables `HOST_ACTION_COMMANDS` for those, using [OctoPrint](https://octoprint.org/),
+
 <br><br>
-Check [Configuring Marlin](https://marlinfw.org/docs/configuration/configuration.html) for details of every setting.
+___
+
+**TODO**
+- (check [M115](https://marlinfw.org/docs/gcode/M115.html))
+
 <br><br>
 
 # Build you own firmware
