@@ -5,7 +5,7 @@ only: "stable",   // build only stable or nightly branch
 
     board_env: "STM32F103RE_creality",
 //    min_version: "2.1.2",
-    min_version: "2.0.9",
+//    min_version: "2.0.9",
     
     meta: {
         stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-default2121",
@@ -16,9 +16,9 @@ only: "stable",   // build only stable or nightly branch
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
 //        stable_branch: "release-{{marlin_version}}",
-        stable_branch: "release-2.1.2.1",              // doesn't seem to work
+//        stable_branch: "release-2.1.2.1",              // doesn't seem to work
+        stable_branch: "release-2.0.9.7",              // doesn't seem to work
         nightly_branch: "bugfix-2.1.x"
 
-//        stable_branch: "release-2.0.9.7",              // doesn't seem to work
     },
 };
