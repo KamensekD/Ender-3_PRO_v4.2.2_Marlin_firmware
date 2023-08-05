@@ -4,7 +4,7 @@ module.exports = {
 //only: "nightly",  // build only stable or nightly branch
 
     
-    extends: "builds/default.js",
+    extends: "builds/_default.js",
 
     
     meta: {
@@ -183,7 +183,7 @@ module.exports = {
 
         
             //for Octoprint
-            "HOST_ACTION_COMMANDS",
+//            "HOST_ACTION_COMMANDS",
 
             
             "HOST_STATUS_NOTIFICATIONS",
