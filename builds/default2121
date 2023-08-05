@@ -6,7 +6,12 @@ active: false,    // disable this build
     board_env: "STM32F103RE_creality",
     min_version: "2.1.2",
 //    min_version: "2.0.9",
-    
+
+// https://api.github.com/repos/MarlinFirmware/Marlin/tarball/2.1.2.1
+// https://github.com/zisismaras/marlin_auto_build/blob/master/src/system.ts
+
+
+
     meta: {
         stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-default2121",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-default2121"
