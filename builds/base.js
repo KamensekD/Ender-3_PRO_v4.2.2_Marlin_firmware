@@ -1,20 +1,24 @@
 module.exports = {
-    //active: false,    // disable this build
-    //only: "stable",   // build only stable or nightly branch
-    //only: "nightly",   // build only stable or nightly branch
+//active: false,    // disable this build
+//only: "stable",   // build only stable or nightly branch
+//only: "nightly",  // build only stable or nightly branch
 
+    
     extends: "builds/default.js",
 
+    
     meta: {
         stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-base",
         nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-base"
-    },
+    },  //meta
 
-    configuration: {
+    
+
+
+    configuration: { // "Configuration.h" customizations - for valid syntax refer to: https://github.com/zisismaras/marlin_auto_build
         enable: [
 
 
-            
             ["CUSTOM_MACHINE_NAME", "Ender-3 Pro v4.2.2"],
             ["STRING_CONFIG_H_AUTHOR", "(KamensekD)"],
 
@@ -72,8 +76,22 @@ module.exports = {
             //Enable speaker
             "SPEAKER",
 
-
-
+            
+            //Stepper Driver Types
+            //"Creality 4.2.2 boards come with a variety of stepper drivers.
+            //Check the board label (typically on SD Card module) and set the correct *_DRIVER_TYPE!
+            //(C=HR4988, E=A4988, A=TMC2208, B=TMC2209, H=TMC2225, H8=HR4988)
+            //* Use TMC2208/TMC2208_STANDALONE for TMC2225 drivers and TMC2209/TMC2209_STANDALONE for TMC2226 drivers.
+            //* Options: A4988, A5984, DRV8825, LV8729, TB6560, TB6600, TMC2100,
+            //*          TMC2130, TMC2130_STANDALONE, TMC2160, TMC2160_STANDALONE,
+            //*          TMC2208, TMC2208_STANDALONE, TMC2209, TMC2209_STANDALONE,
+            //*          TMC26X,  TMC26X_STANDALONE,  TMC2660, TMC2660_STANDALONE,
+            //*          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
+            //["X_DRIVER_TYPE",  q`A4988`],
+            //["Y_DRIVER_TYPE",  q`A4988`],
+            //["Z_DRIVER_TYPE",  q`A4988`],
+            //["E0_DRIVER_TYPE", q`A4988`],
+            //"NO_CREALITY_422_DRIVER_WARNING",
 
 
             //eliminates vibration during printing by fitting a Bézier curve to move acceleration
@@ -85,20 +103,20 @@ module.exports = {
 
 
             //Auto Level settings
-            ["GRID_MAX_POINTS_X", 5],            // number of points in x direction
-            ["MESH_INSET", 1],                   // Set Mesh bounds as an inset region of the bed
+            ["GRID_MAX_POINTS_X", 5],   // number of points in x direction
+            ["MESH_INSET", 1],          // Set Mesh bounds as an inset region of the bed
 
             
             "BLTOUCH",
             ["Z_MIN_PROBE_PIN", q`PB1`],
 
             
-            "AUTO_BED_LEVELING_UBL",  // most advanced bed leveling system combining the features and benefits of other systems
-            "RESTORE_LEVELING_AFTER_G28",   // normally G28 leaves leveling disabled; this options to restore prior leveling state
+            "AUTO_BED_LEVELING_UBL",       // most advanced bed leveling system combining the features and benefits of other systems
+            "RESTORE_LEVELING_AFTER_G28",  // normally G28 leaves leveling disabled; this options to restore prior leveling state
             "UBL_MESH_WIZARD",
 
 
-            //#define G26_MESH_VALIDATION
+            //#define G26_MESH_VALIDATION settings
             "G26_MESH_VALIDATION",
             ["MESH_TEST_NOZZLE_SIZE",0.4],  // (mm) Diameter of primary nozzle.
             ["MESH_TEST_LAYER_HEIGHT",0.2], // (mm) Default layer height for G26.
@@ -112,6 +130,7 @@ module.exports = {
             "Z_SAFE_HOMING",
             "USE_PROBE_FOR_Z_HOMING",
 
+            
             ["XY_PROBE_FEEDRATE", q`(150*60)`],
             ["Z_PROBE_FEEDRATE_FAST", q`(15*60)`],
             ["Z_PROBE_FEEDRATE_SLOW", q`(4*60)`],
@@ -127,7 +146,7 @@ module.exports = {
             ["Z_CLEARANCE_MULTI_PROBE", 4],
                  
 
-            ["DEFAULT_LEVELING_FADE_HEIGHT", 40],
+            ["DEFAULT_LEVELING_FADE_HEIGHT", 10],
             ["NOZZLE_TO_PROBE_OFFSET", [-27, 0, -1.5]],
             // my printer's probe offsets: M851 X-27.00 Y0.00 Z-1.50 ; (mm)
 
@@ -143,27 +162,25 @@ module.exports = {
             "USB_FLASH_DRIVE_SUPPORT",    //
 
             
-            
-        ],
+        ],  //enable
         disable: [
-
 
 
             "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
             "MULTIPLE_PROBING",
             "EXTRA_PROBING",
 
-
             
-        ]
-    },
+        ],  //disable
+    },  //configuration
 
     
     
     
     
-    configuration_adv: {
+    configuration_adv: { // "Configuration_adv.h" customizations - for valid syntax refer to: https://github.com/zisismaras/marlin_auto_build
         enable: [
+
         
             //for Octoprint
             "HOST_ACTION_COMMANDS",
@@ -173,14 +190,14 @@ module.exports = {
 
             
             //for Auto Level
-            ["PROBING_MARGIN_LEFT", 20],
+            ["PROBING_MARGIN_LEFT",  20],
             ["PROBING_MARGIN_RIGHT", 20],
             ["PROBING_MARGIN_FRONT", 20],
-            ["PROBING_MARGIN_BACK", 20],
+            ["PROBING_MARGIN_BACK",  20],
 
             
-            ["MESH_MIN_X", 25],
-            ["MESH_MIN_Y", 25],
+            ["MESH_MIN_X",  25],
+            ["MESH_MIN_Y",  25],
             ["MESH_MAX_X", 210],
             ["MESH_MAX_Y", 210],
 //            ["MESH_MIN_X", MESH_INSET],
@@ -207,11 +224,11 @@ module.exports = {
             "LIN_ADVANCE",
             ["ADVANCE_K", 0.5],
             "ALLOW_LOW_EJERK",
-            "EXPERIMENTAL_SCURVE",    // removed in bugfix 2.1.x, needed for stable 2.1.2 Marlin
-             //"LIN_ADVANCE and S_CURVE_ACCELERATION may not play well together! Enable EXPERIMENTAL_SCURVE to continue."
+            "EXPERIMENTAL_SCURVE",  // removed in bugfix 2.1.x, needed for stable 2.1.2 Marlin
+            //"LIN_ADVANCE and S_CURVE_ACCELERATION may not play well together! Enable EXPERIMENTAL_SCURVE to continue."
 
 
-            //handles M108, M112, M410, M876 imidiately
+            //handles M108, M112, M410, M876 immediately
             "EMERGENCY_PARSER",
 
 
@@ -232,9 +249,14 @@ module.exports = {
             ["CHOPPER_TIMING",  q`CHOPPER_DEFAULT_24V`],
 
         
-        ]
-    }
+        ],  //enable
+        disable: [
 
 
-    
-};
+            "POWER_LOSS_RECOVERY",   //disable this to save SD card writes for each layer
+            "SDCARD_READONLY",       //read/write access to SD card
+
+
+        ],  //disable
+    },  //configuration_adv
+};  //module.exports
