@@ -8,8 +8,8 @@ module.exports = {
 
     
     meta: {
-        stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-base",
-        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-base"
+        stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-custom",
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-custom"
     },  //meta
 
     
