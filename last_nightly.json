@@ -4,6 +4,11 @@
         "md5": "b1c6dd606322a0d5f97bf710bffedb11",
         "assetId": 120226434
     },
+    "builds/custom-octo.js": {
+        "version": "f66323ecfbe067667234df286e14d43d409bfaea",
+        "md5": "31bffe4dfd9135be8fa28617f990dd19",
+        "assetId": 120227461
+    },
     "builds/custom.js": {
         "version": "f66323ecfbe067667234df286e14d43d409bfaea",
         "md5": "6f152c836ab28d51de83cc7b691b16c0",
