@@ -8,7 +8,7 @@ only: "stable",   // build only stable or nightly branch
     
     meta: {
         stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}-default2121",
-//        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-default2121"
+        nightly_name: "ender3pro_v4.2.2_{{current_date}}_M2.1.x_bugfix{{marlin_version}}-default2121"
     },
 
     based_on: {     // default Ender-3 Pro Marlin example config
