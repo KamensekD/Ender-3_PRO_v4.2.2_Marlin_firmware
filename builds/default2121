@@ -4,7 +4,7 @@ active: false,    // disable this build
 //only: "nightly",   // build only stable or nightly branch
 
     board_env: "STM32F103RE_creality",
-//    min_version: "2.1.2",
+    min_version: "2.1.2",
 //    min_version: "2.0.9",
     
     meta: {
