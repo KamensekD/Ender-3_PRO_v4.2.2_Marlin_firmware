@@ -1,22 +1,7 @@
 {
-    "builds/base.js": {
+    "builds/_default.js": {
         "version": "f66323ecfbe067667234df286e14d43d409bfaea",
-        "md5": "088726e5035b1468ec2891e2ec5d1a19",
-        "assetId": 120205870
-    },
-    "builds/custom.js": {
-        "version": "f66323ecfbe067667234df286e14d43d409bfaea",
-        "md5": "fb581ad0142275c66f0a92c3fd5aa4eb",
-        "assetId": 119420993
-    },
-    "builds/custom_noOcto.js": {
-        "version": "f66323ecfbe067667234df286e14d43d409bfaea",
-        "md5": "11fbd2f111eaab044df5b141c84cd350",
-        "assetId": 119422374
-    },
-    "builds/default.js": {
-        "version": "f66323ecfbe067667234df286e14d43d409bfaea",
-        "md5": "8c6a105aa21ce772d74c3211aa4c3ca0",
-        "assetId": 120205872
+        "md5": "b1c6dd606322a0d5f97bf710bffedb11",
+        "assetId": 120226434
     }
 }
