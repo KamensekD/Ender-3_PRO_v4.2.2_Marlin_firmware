@@ -11,7 +11,7 @@ Here You can find Marlin firmware builds for the Ender-3 Pro with the stock crea
 You can find firmware downloads on the repository [releases](https://github.com/KamensekD/Ender-3-PRO-v4.2.2_Marlin-firmware/releases).  
 
 **Important**
-* Make sure you have a 4.2.2 512K flash board before installing. Some newer models come with 256K of flash. You can read more [here](https://github.com/MarlinFirmware/Marlin/issues/23596). If your board is the 256K variant you can fork the repo and change the `board_env`.
+* Make sure you have a 4.2.2 512K flash board before installing my customized builds. Some newer models come with 256K of flash. You can read more [here](https://github.com/MarlinFirmware/Marlin/issues/23596). If your board is the 256K variant you can fork the repo and change the `board_env`. Check also [Marlin Firmware on Creality Board – Complete Guide](https://3dprintscape.com/marlin-firmware-on-creality-board-complete-guide/?utm_content=cmp-true) for a lot of usefull info.
 * All builds here use the default `A4988` stepper drivers, you can fork and change that if you have different ones. To find out which drivers you have there is a little marking on the sd card slot. More info [here](https://github.com/MarlinFirmware/Configurations/pull/633#issuecomment-995206382).
 
 <br>
