@@ -1,4 +1,4 @@
-This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** to build customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board  
+This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** to automatically build latest default and customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board  
 
 ```diff
 ! PARTLY TESTED - Stable version doesn't seem to flash on my printer, **bugfixed Nightly** versions seem to work OK though
@@ -7,7 +7,7 @@ This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_
 
 # Ender-3 Pro v4.2.2 Marlin firmware
 
-Automated Marlin builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
+Here You can find Marlin firmware builds for the Ender-3 Pro with the stock creality 4.2.2(512K) board.  
 You can find firmware downloads on the repository [releases](https://github.com/KamensekD/Ender-3-PRO-v4.2.2_Marlin-firmware/releases).  
 
 **Important**
@@ -17,21 +17,22 @@ You can find firmware downloads on the repository [releases](https://github.com/
 <br>
 
 ## Builds
-Check [Configuring Marlin](https://marlinfw.org/docs/configuration/configuration.html) for details of every setting.
+Different firmware builds are available. They are based on configuration files in [builds](https://github.com/KamensekD/Ender-3_PRO_v4.2.2_Marlin_firmware/tree/master/builds) folder.
+<br>Check **[Zisimaras Marlin_Auto_Build](https://github.com/zisismaras/marlin_auto_build)** for valid syntax of builds configuration files and **[Configuring Marlin](https://marlinfw.org/docs/configuration/configuration.html)** for details of every Marlin setting.
 
 <br>
 
 ### `_default`
 ___
 
-**the default Marlin configuration for Ender-3 Pro based on [default example configuration](https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/Creality/Ender-3%20Pro/CrealityV422)**
+**unchanged default Marlin configuration for Ender-3 Pro based on [default example configuration](https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/Creality/Ender-3%20Pro/CrealityV422)**
 
 <br>
 
 ### `custom`
 ___
 
-**my customized firmware modifications that suit me and might or might not be good for you, so use with caution!**
+**my customized firmware modifications that suit my needs and might or might not be good for you, so use with caution!**
 
 - adds options to menu: **Bed Tramming**, **Tramming Wizard**, **Bed Leveling**, **Probe Offset Wizzard**, **PID Edit**, **Mesh Edit**, **Autotune**, 
 - enables [G29 UBL Automatic Leveling on 5x5 mesh](https://marlinfw.org/docs/gcode/G029-ubl.html),  
