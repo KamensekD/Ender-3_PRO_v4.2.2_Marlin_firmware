@@ -16,9 +16,8 @@ module.exports = {
         repo: "https://github.com/MarlinFirmware/Configurations/",
         path: "/config/examples/Creality/Ender-3 Pro/CrealityV422/",
 //        stable_branch: "release-{{marlin_version}}",
-        stable_branch: "2.1.x",
+        stable_branch: "2.1.2.1",
         nightly_branch: "bugfix-2.1.x"
-//        stable_branch: "release-2.0.9.7",              // doesn't seem to work
 //        stable_branch: "release-2.1.2.1",              // doesn't seem to work
     },
 };
