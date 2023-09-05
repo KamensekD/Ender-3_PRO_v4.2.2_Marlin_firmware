@@ -4,7 +4,7 @@ module.exports = {
 //only: "nightly",   // build only stable or nightly branch
     
     board_env: "STM32F103RE_creality",
-    min_version: "2.1.2",
+//    min_version: "2.1.2",
     
     meta: {
         stable_name: "ender3pro_v4.2.2_{{current_date}}_M{{marlin_version}}_default",
