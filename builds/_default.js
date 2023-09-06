@@ -18,7 +18,7 @@ module.exports = {
         stable_branch: "release-{{marlin_version}}",
 //        stable_branch: "2.1.2.1",                      // doesn't seem to work
 
-    
+     
         nightly_branch: "bugfix-2.1.x"
 //        stable_branch: "release-2.1.2.1",              // doesn't seem to work
 
