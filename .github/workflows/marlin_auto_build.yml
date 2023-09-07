@@ -24,7 +24,7 @@ jobs:
   create_builds:
     runs-on: ubuntu-latest 
     steps:
-    #- uses: KamensekD/marlin_auto_build@Debug
-    - uses: KamensekD/marlin_auto_build@master_zisismaras
+    - uses: KamensekD/marlin_auto_build@Debug
+    #- uses: KamensekD/marlin_auto_build@master_zisismaras
     #- uses: KamensekD/marlin_auto_build@master
     #- uses: zisismaras/marlin_auto_build@master
