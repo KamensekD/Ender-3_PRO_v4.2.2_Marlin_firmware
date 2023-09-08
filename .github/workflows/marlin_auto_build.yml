@@ -24,9 +24,9 @@ jobs:
   create_builds:
     runs-on: ubuntu-latest 
     steps:
-    - uses: KamensekD/marlin_auto_build@debug
-    #- uses: KamensekD/marlin_auto_build@master
-    # note: both @Debug and @master start "default" branch, which is at the moment "Debug"
-    #       @master_zisismaras starts appropriate branch
+    - uses: KamensekD/marlin_auto_build@master
+    #- uses: KamensekD/marlin_auto_build@Debug
+    # note: both @master and @Debug actually start "default" branch(?!), which is
+    #       at the moment "Debug"; but @master_zisismaras starts appropriate branch(?!)
     #- uses: KamensekD/marlin_auto_build@master_zisismaras
     #- uses: zisismaras/marlin_auto_build@master
