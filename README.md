@@ -1,4 +1,6 @@
-This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** to automatically build latest default and customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board  
+This is my take of [zisismaras](https://github.com/zisismaras)'s **[marlin_auto_build](https://github.com/zisismaras/marlin_auto_build)** (it actually uses my fork [kamensekd/marlin_auto_build](https://github.com/KamensekD/marlin_auto_build) with following [differences](https://github.com/zisismaras/marlin_auto_build/compare/master...KamensekD:marlin_auto_build:Debug))
+to automatically build latest default and customized [Marlin](https://github.com/MarlinFirmware/Marlin) firmware for **Ender-3 Pro** with **4.2.2** board.
+<br>It checks for new Marlin versions every day and if they exist, it builds new firmwares.
 
 ```diff
 ! PARTLY TESTED - Stable version doesn't seem to flash on my printer, **bugfixed Nightly** versions seem to work OK though
