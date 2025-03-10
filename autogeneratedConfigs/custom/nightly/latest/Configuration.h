@@ -133,6 +133,7 @@
 
 // Name displayed in the LCD "Ready" message and Info menu
 #define CUSTOM_MACHINE_NAME "Ender-3 Pro v4.2.2" //ORIGINAL: #define CUSTOM_MACHINE_NAME "Ender-3 Pro V1.5 (4.2.2)"
+//#define CONFIGURABLE_MACHINE_NAME // Add G-code M550 to set/report the machine name
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
