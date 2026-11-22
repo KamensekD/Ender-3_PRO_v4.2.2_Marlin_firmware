@@ -1041,6 +1041,17 @@
   #define PEN_UP_DOWN_MENU                // Add "Pen Up" and "Pen Down" to the MarlinUI menu
 #endif
 
+// @section pancakebot
+
+/**
+ * PancakeBot
+ *  - Batter Pump on the fan output (M106 / M107) stops while the print is paused.
+ *  - LEDs that show SD printing and SD card errors.
+ *
+ * Use with the PancakeBot board and PANCAKEBOT_PANEL.
+ */
+//#define PANCAKEBOT
+
 // @section delta
 
 /**
@@ -1068,6 +1079,10 @@
   #if ENABLED(DELTA_AUTO_CALIBRATION)
     // Default number of probe points : n*n (1 -> 7)
     #define DELTA_CALIBRATION_DEFAULT_POINTS 4
+
+    // Add G33 'L' to solve by least squares, as in RepRapFirmware, and optionally calibrate the diagonal rod.
+    // The factors to adjust are chosen by the 'L' value: 3 (endstops), 4 (+ radius), 6 (+ tower angles), 7 (+ diagonal rod)
+    //#define DELTA_CALIBRATION_LEAST_SQUARES
   #endif
 
   #if ANY(DELTA_AUTO_CALIBRATION, DELTA_CALIBRATION_MENU)
@@ -3185,6 +3200,12 @@
 // https://reprap.org/wiki/MaKrPanel
 //
 //#define MAKRPANEL
+
+//
+// PancakeBot Panel with a 128x32 ST7565 graphic display and 4 push buttons.
+// Up / Down / Select / Back. Use with the PancakeBot board and PANCAKEBOT.
+//
+//#define PANCAKEBOT_PANEL
 
 //
 // Adafruit ST7565 Full Graphic Controller.
